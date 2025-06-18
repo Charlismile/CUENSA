@@ -1,0 +1,30 @@
+﻿@page "/documentos"
+@using Microsoft.AspNetCore.Components.Forms
+
+<InputFile OnChange="@HandleSelection" multiple />
+
+@if (fileNames.Count > 0)
+{
+    <ul>
+        @foreach (var name in fileNames)
+        {
+            <li>@name</li>
+        }
+    </ul>
+}
+
+@code {
+    private List<string> fileNames = new();
+
+    private async Task HandleSelection(InputFileChangeEventArgs e)
+    {
+        foreach (var file in e.GetMultipleFiles())
+        {
+            var path = Path.Combine("wwwroot/uploads", file.Name);
+            using var stream = file.OpenReadStream();
+            using var fs = new FileStream(path, FileMode.Create);
+            await stream.CopyToAsync(fs);
+            fileNames.Add(file.Name);
+        }
+    }
+}

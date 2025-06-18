@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\carlo\\RiderProjects\\CUENSA\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CUENSA.bundle.scp.css",
+      "PackagePath": "staticwebassets\\CUENSA.xnat71gmqd.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\carlo\\RiderProjects\\CUENSA\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\carlo\\RiderProjects\\CUENSA\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\carlo\\RiderProjects\\CUENSA\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\carlo\\RiderProjects\\CUENSA\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CUENSA.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CUENSA.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.CUENSA.props",
+      "PackagePath": "build\\CUENSA.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.CUENSA.props",
+      "PackagePath": "buildMultiTargeting\\CUENSA.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.CUENSA.props",
+      "PackagePath": "buildTransitive\\CUENSA.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

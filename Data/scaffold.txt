@@ -1,0 +1,1 @@
+﻿dotnet ef dbcontext scaffold "Name=ConnectionStrings:DefaultConnection" Microsoft.EntityFrameworkCore.SqlServer --output-dir Models/Entities/BdSicuensa --context DbContextSicuensa -t AspNetRoleClaims -t AspNetRoles -t AspNetUserClaims -t AspNetUserLogins -t AspNetUserRoles -t AspNetUsers -t AspNetUserTokens -t Clasificacion -t Instalacion -t SHA1 -t SHA2 -t SHA3 -t SHA4

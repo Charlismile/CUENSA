@@ -1,0 +1,199 @@
+﻿@page "/InstalacionesIndex"
+@using Microsoft.EntityFrameworkCore
+@using SICUENSA.Models.Entities.BdSicuensa
+@inject DbContextSicuensa Db
+
+<h3>Gestión de Instalaciones</h3>
+
+<!-- Mensaje de estado -->
+@if (!string.IsNullOrEmpty(statusMessage))
+{
+    <div class="alert @statusClass" role="alert">
+        @statusMessage
+    </div>
+}
+
+<!-- Formulario crear nueva instalación -->
+<div class="card mb-4">
+    <div class="card-body">
+        <InputText @bind-Value="newInstalacion.InstalacionSalud" placeholder="Nombre" class="form-control mb-2" />
+        <InputText @bind-Value="newInstalacion.NivelInstalacion" placeholder="Nivel" class="form-control mb-2" />
+        <InputText @bind-Value="newInstalacion.TipoInstalacion" placeholder="Tipo" class="form-control mb-2" />
+
+        <button class="btn btn-success" @onclick="AddInstalacion">Agregar</button>
+    </div>
+</div>
+
+<!-- Tabla de instalaciones -->
+<Table TableType="TableType.Striped">
+    <thead>
+        <tr><th>ID</th><th>Nombre</th><th>Nivel</th><th>Tipo</th><th>Acciones</th></tr>
+    </thead>
+    <tbody>
+        @foreach (var item in instalaciones)
+        {
+            <tr>
+                <td>@item.InstalacionSaludId</td>
+                <td>@item.InstalacionSalud</td>
+                <td>@item.NivelInstalacion</td>
+                <td>@item.TipoInstalacion</td>
+                <td>
+                    <button class="btn btn-sm btn-outline-primary me-1" @onclick="() => StartEdit(item)">Editar</button>
+                    <button class="btn btn-sm btn-outline-danger" @onclick="() => DeleteInstalacion(item.InstalacionSaludId)">Eliminar</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</Table>
+
+<!-- Modal de edición -->
+@if (editingInstalacion is not null)
+{
+    <div class="modal fade show d-block" tabindex="0" style="background-color: rgba(0,0,0,0.5);">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Editar Instalación</h5>
+                    <button type="button" class="btn-close" @onclick="CancelEdit"></button>
+                </div>
+                <div class="modal-body">
+                    <InputText @bind-Value="editingInstalacion.InstalacionSalud" class="form-control mb-2" />
+                    <InputText @bind-Value="editingInstalacion.NivelInstalacion" class="form-control mb-2" />
+                    <InputText @bind-Value="editingInstalacion.TipoInstalacion" class="form-control mb-2" />
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" @onclick="CancelEdit">Cancelar</button>
+                    <button class="btn btn-primary" @onclick="SaveEdit">Guardar cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    private List<Instalacion> instalaciones = new();
+    private Instalacion newInstalacion = new();
+    private Instalacion? editingInstalacion = null;
+    private string statusMessage = "";
+    private string statusClass = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadData();
+    }
+
+    private async Task LoadData()
+    {
+        instalaciones = await Db.Instalaciones.ToListAsync();
+    }
+
+    private async Task AddInstalacion()
+    {
+        if (string.IsNullOrWhiteSpace(newInstalacion.InstalacionSalud))
+        {
+            ShowError("El nombre es obligatorio.");
+            return;
+        }
+
+        try
+        {
+            await Db.Instalaciones.AddAsync(newInstalacion);
+            await Db.SaveChangesAsync();
+            ShowSuccess("Instalación agregada correctamente.");
+
+            newInstalacion = new();
+            await LoadData();
+        }
+        catch (Exception ex)
+        {
+            ShowError($"Error al guardar: {ex.Message}");
+        }
+    }
+
+    private void StartEdit(Instalacion item)
+    {
+        editingInstalacion = new Instalacion
+        {
+            InstalacionSaludId = item.InstalacionSaludId,
+            InstalacionSalud = item.InstalacionSalud,
+            NivelInstalacion = item.NivelInstalacion,
+            TipoInstalacion = item.TipoInstalacion
+        };
+    }
+
+    private async Task SaveEdit()
+    {
+        if (editingInstalacion is null) return;
+
+        try
+        {
+            var existing = await Db.Instalaciones.FindAsync(editingInstalacion.InstalacionSaludId);
+
+            if (existing is not null)
+            {
+                existing.InstalacionSalud = editingInstalacion.InstalacionSalud;
+                existing.NivelInstalacion = editingInstalacion.NivelInstalacion;
+                existing.TipoInstalacion = editingInstalacion.TipoInstalacion;
+
+                Db.Instalaciones.Update(existing); // Asegura que EF Core rastree los cambios
+                await Db.SaveChangesAsync();
+                ShowSuccess("Cambios guardados correctamente.");
+
+                editingInstalacion = null;
+                await LoadData();
+            }
+        }
+        catch (Exception ex)
+        {
+            ShowError($"Error al actualizar: {ex.Message}");
+        }
+    }
+
+    private async Task DeleteInstalacion(double? id)
+    {
+        try
+        {
+            var item = await Db.Instalaciones.FindAsync(id);
+            if (item is not null)
+            {
+                Db.Instalaciones.Remove(item);
+                await Db.SaveChangesAsync();
+                ShowSuccess("Registro eliminado correctamente.");
+                await LoadData();
+            }
+        }
+        catch (Exception ex)
+        {
+            ShowError($"Error al eliminar: {ex.Message}");
+        }
+    }
+
+    private void CancelEdit()
+    {
+        editingInstalacion = null;
+    }
+
+    private void ShowSuccess(string message)
+    {
+        statusMessage = message;
+        statusClass = "alert alert-success";
+        StateHasChanged();
+        _ = ClearStatusMessage();
+    }
+
+    private void ShowError(string message)
+    {
+        statusMessage = message;
+        statusClass = "alert alert-danger";
+        StateHasChanged();
+        _ = ClearStatusMessage();
+    }
+
+    private async Task ClearStatusMessage()
+    {
+        await Task.Delay(5000);
+        statusMessage = "";
+        statusClass = "";
+        StateHasChanged();
+    }
+}
