@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
+using CUENSA.Models.Entities.BdSicuensa;
 using Microsoft.EntityFrameworkCore;
 using OfficeOpenXml;
-using SICUENSA.Models.Entities.BdSicuensa;
 using LicenseContext = OfficeOpenXml.LicenseContext;
 
 namespace SICUENSA.Repositories.Services;
@@ -24,7 +24,7 @@ public class ReportService
         worksheet.Cells[1, 3].Value = "Nivel";
         worksheet.Cells[1, 4].Value = "Tipo";
 
-        var instalaciones = await _db.Instalaciones.ToListAsync();
+        var instalaciones = await _db.Instalacion.ToListAsync();
         for (int i = 0; i < instalaciones.Count; i++)
         {
             worksheet.Cells[i + 2, 1].Value = instalaciones[i].InstalacionSaludId;

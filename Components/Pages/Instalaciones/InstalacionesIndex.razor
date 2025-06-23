@@ -1,55 +1,114 @@
-﻿@page "/InstalacionesIndex"
-@using Microsoft.EntityFrameworkCore
-@using SICUENSA.Models.Entities.BdSicuensa
-@inject DbContextSicuensa Db
+﻿@page "/Instalaciones"
+@using System.ComponentModel.DataAnnotations
+@using CUENSA.Models.Entities.BdSicuensa
+@using SICUENSA.Repositories.Services
+@inject InstalacionService InstalacionService
 
-<h3>Gestión de Instalaciones</h3>
+<h3 class="mb-4">Lista de Instalaciones</h3>
 
 <!-- Mensaje de estado -->
-@if (!string.IsNullOrEmpty(statusMessage))
+@if (Instalaciones == null || Instalaciones.Count == 0)
 {
-    <div class="alert @statusClass" role="alert">
-        @statusMessage
+    <div class="alert alert-danger">
+        No hay datos disponibles. Asegúrate de que la conexión a la base de datos sea correcta.
+    </div>
+}
+else
+{
+    <div class="alert alert-success">
+        Cargados @Instalaciones.Count registros
     </div>
 }
 
-<!-- Formulario crear nueva instalación -->
-<div class="card mb-4">
+<!-- Filtros -->
+<div class="card mb-4 shadow-sm">
+    <div class="card-header bg-light fw-bold">
+        Filtros de Búsqueda
+    </div>
     <div class="card-body">
-        <InputText @bind-Value="newInstalacion.InstalacionSalud" placeholder="Nombre" class="form-control mb-2" />
-        <InputText @bind-Value="newInstalacion.NivelInstalacion" placeholder="Nivel" class="form-control mb-2" />
-        <InputText @bind-Value="newInstalacion.TipoInstalacion" placeholder="Tipo" class="form-control mb-2" />
+        <form class="row g-3 align-items-end">
+            <div class="col-md-4">
+                <label for="filter-nombre" class="form-label">Nombre</label>
+                <input id="filter-nombre" type="text" class="form-control" @bind="Filter.Nombre" placeholder="Filtrar por nombre" />
+            </div>
+            <div class="col-md-3">
+                <label for="filter-nivel" class="form-label">Nivel</label>
+                <input id="filter-nivel" type="text" class="form-control" @bind="Filter.Nivel" placeholder="Filtrar por nivel" />
+            </div>
+            <div class="col-md-3">
+                <label for="filter-tipo" class="form-label">Tipo</label>
+                <input id="filter-tipo" type="text" class="form-control" @bind="Filter.Tipo" placeholder="Filtrar por tipo" />
+            </div>
+            <div class="col-md-2 text-end">
+                <button type="button" class="btn btn-outline-secondary w-100" @onclick="ClearFilters">Limpiar</button>
+            </div>
+        </form>
+    </div>
+</div>
 
-        <button class="btn btn-success" @onclick="AddInstalacion">Agregar</button>
+<!-- Formulario para agregar nueva instalación -->
+<div class="card mb-4 shadow-sm">
+    <div class="card-header bg-light fw-bold">
+        Agregar Nueva Instalación
+    </div>
+    <div class="card-body">
+        <form class="row g-3">
+            <div class="col-md-4">
+                <input type="text" class="form-control" placeholder="Nombre" @bind="NewInstalacion.InstalacionSalud" />
+            </div>
+            <div class="col-md-3">
+                <input type="text" class="form-control" placeholder="Nivel" @bind="NewInstalacion.NivelInstalacion" />
+            </div>
+            <div class="col-md-3">
+                <input type="text" class="form-control" placeholder="Tipo" @bind="NewInstalacion.TipoInstalacion" />
+            </div>
+            <div class="col-md-2 text-end">
+                <button class="btn btn-success w-100" @onclick="AddInstalacion">Agregar</button>
+            </div>
+        </form>
     </div>
 </div>
 
 <!-- Tabla de instalaciones -->
-<Table TableType="TableType.Striped">
-    <thead>
-        <tr><th>ID</th><th>Nombre</th><th>Nivel</th><th>Tipo</th><th>Acciones</th></tr>
-    </thead>
-    <tbody>
-        @foreach (var item in instalaciones)
-        {
-            <tr>
-                <td>@item.InstalacionSaludId</td>
-                <td>@item.InstalacionSalud</td>
-                <td>@item.NivelInstalacion</td>
-                <td>@item.TipoInstalacion</td>
-                <td>
-                    <button class="btn btn-sm btn-outline-primary me-1" @onclick="() => StartEdit(item)">Editar</button>
-                    <button class="btn btn-sm btn-outline-danger" @onclick="() => DeleteInstalacion(item.InstalacionSaludId)">Eliminar</button>
-                </td>
-            </tr>
-        }
-    </tbody>
-</Table>
+<div class="card shadow-sm">
+    <div class="card-body">
+        <p class="text-muted mb-3">Mostrando <strong>@FilteredInstalaciones.Count</strong> de <strong>@Instalaciones.Count</strong> registros.</p>
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover align-middle">
+                <thead class="table-primary">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Nivel</th>
+                        <th>Tipo</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in FilteredInstalaciones)
+                    {
+                        <tr>
+                            <td>@item.InstalacionSaludId</td>
+                            <td>@item.InstalacionSalud</td>
+                            <td>@item.NivelInstalacion</td>
+                            <td>@item.TipoInstalacion</td>
+                            <td class="text-center">
+                                <button class="btn btn-warning btn-sm me-1" @onclick="() => StartEdit(item)">Editar</button>
+                                @* <button class="btn btn-danger btn-sm" @onclick="() => DeleteInstalacion(item.InstalacionSaludId!.Value)">Eliminar</button> *@
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 
 <!-- Modal de edición -->
-@if (editingInstalacion is not null)
+@if (EditingInstalacion is not null)
 {
-    <div class="modal fade show d-block" tabindex="0" style="background-color: rgba(0,0,0,0.5);">
+    <div class="modal fade show d-block" tabindex="-1" style="background-color: rgba(0,0,0,0.5);">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -57,13 +116,22 @@
                     <button type="button" class="btn-close" @onclick="CancelEdit"></button>
                 </div>
                 <div class="modal-body">
-                    <InputText @bind-Value="editingInstalacion.InstalacionSalud" class="form-control mb-2" />
-                    <InputText @bind-Value="editingInstalacion.NivelInstalacion" class="form-control mb-2" />
-                    <InputText @bind-Value="editingInstalacion.TipoInstalacion" class="form-control mb-2" />
+                    <div class="mb-3">
+                        <label>Nombre:</label>
+                        <input type="text" class="form-control" @bind="EditingInstalacion.InstalacionSalud" />
+                    </div>
+                    <div class="mb-3">
+                        <label>Nivel:</label>
+                        <input type="text" class="form-control" @bind="EditingInstalacion.NivelInstalacion" />
+                    </div>
+                    <div class="mb-3">
+                        <label>Tipo:</label>
+                        <input type="text" class="form-control" @bind="EditingInstalacion.TipoInstalacion" />
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" @onclick="CancelEdit">Cancelar</button>
-                    <button class="btn btn-primary" @onclick="SaveEdit">Guardar cambios</button>
+                    <button class="btn btn-primary" @onclick="SaveEdit">Guardar</button>
                 </div>
             </div>
         </div>
@@ -71,48 +139,71 @@
 }
 
 @code {
-    private List<Instalacion> instalaciones = new();
-    private Instalacion newInstalacion = new();
-    private Instalacion? editingInstalacion = null;
-    private string statusMessage = "";
-    private string statusClass = "";
+    private List<Instalacion> Instalaciones = new();
+    private List<Instalacion> FilteredInstalaciones = new();
+    private Instalacion NewInstalacion = new();
+    private Instalacion? EditingInstalacion = null;
+
+    private string StatusMessage = "";
+    private string StatusMessageType = "";
+
+    // Objeto para filtros
+    private Filters Filter = new();
 
     protected override async Task OnInitializedAsync()
     {
-        await LoadData();
+        await RefreshData();
     }
 
-    private async Task LoadData()
+    private void ApplyFilters()
     {
-        instalaciones = await Db.Instalaciones.ToListAsync();
+        if (Instalaciones == null)
+        {
+            FilteredInstalaciones = new List<Instalacion>();
+            return;
+        }
+
+        FilteredInstalaciones = Instalaciones
+            .Where(i => string.IsNullOrWhiteSpace(Filter.Nombre) || 
+                        (i.InstalacionSalud?.Contains(Filter.Nombre, StringComparison.OrdinalIgnoreCase) ?? false))
+            .Where(i => string.IsNullOrWhiteSpace(Filter.Nivel) || 
+                        (i.NivelInstalacion?.Contains(Filter.Nivel, StringComparison.OrdinalIgnoreCase) ?? false))
+            .Where(i => string.IsNullOrWhiteSpace(Filter.Tipo) || 
+                        (i.TipoInstalacion?.Contains(Filter.Tipo, StringComparison.OrdinalIgnoreCase) ?? false))
+            .ToList();
+    }
+
+    private void ClearFilters()
+    {
+        Filter = new Filters();
+        ApplyFilters();
     }
 
     private async Task AddInstalacion()
     {
-        if (string.IsNullOrWhiteSpace(newInstalacion.InstalacionSalud))
+        var validationContext = new ValidationContext(NewInstalacion);
+        var validationResults = new List<ValidationResult>();
+
+        bool isValid = Validator.TryValidateObject(NewInstalacion, validationContext, validationResults, true);
+
+        if (!isValid)
         {
-            ShowError("El nombre es obligatorio.");
+            foreach (var error in validationResults)
+            {
+                ShowMessage(error.ErrorMessage, "danger");
+            }
             return;
         }
 
-        try
-        {
-            await Db.Instalaciones.AddAsync(newInstalacion);
-            await Db.SaveChangesAsync();
-            ShowSuccess("Instalación agregada correctamente.");
-
-            newInstalacion = new();
-            await LoadData();
-        }
-        catch (Exception ex)
-        {
-            ShowError($"Error al guardar: {ex.Message}");
-        }
+        await InstalacionService.AddAsync(NewInstalacion);
+        NewInstalacion = new();
+        await RefreshData();
+        ShowMessage("Instalación agregada correctamente.", "success");
     }
 
     private void StartEdit(Instalacion item)
     {
-        editingInstalacion = new Instalacion
+        EditingInstalacion = new Instalacion
         {
             InstalacionSaludId = item.InstalacionSaludId,
             InstalacionSalud = item.InstalacionSalud,
@@ -123,77 +214,52 @@
 
     private async Task SaveEdit()
     {
-        if (editingInstalacion is null) return;
+        if (EditingInstalacion == null) return;
 
-        try
-        {
-            var existing = await Db.Instalaciones.FindAsync(editingInstalacion.InstalacionSaludId);
-
-            if (existing is not null)
-            {
-                existing.InstalacionSalud = editingInstalacion.InstalacionSalud;
-                existing.NivelInstalacion = editingInstalacion.NivelInstalacion;
-                existing.TipoInstalacion = editingInstalacion.TipoInstalacion;
-
-                Db.Instalaciones.Update(existing); // Asegura que EF Core rastree los cambios
-                await Db.SaveChangesAsync();
-                ShowSuccess("Cambios guardados correctamente.");
-
-                editingInstalacion = null;
-                await LoadData();
-            }
-        }
-        catch (Exception ex)
-        {
-            ShowError($"Error al actualizar: {ex.Message}");
-        }
+        await InstalacionService.UpdateAsync(EditingInstalacion);
+        await RefreshData();
+        ShowMessage("Datos actualizados correctamente.", "success");
+        EditingInstalacion = null;
     }
 
-    private async Task DeleteInstalacion(double? id)
+    private async Task DeleteInstalacion(int id)
     {
-        try
-        {
-            var item = await Db.Instalaciones.FindAsync(id);
-            if (item is not null)
-            {
-                Db.Instalaciones.Remove(item);
-                await Db.SaveChangesAsync();
-                ShowSuccess("Registro eliminado correctamente.");
-                await LoadData();
-            }
-        }
-        catch (Exception ex)
-        {
-            ShowError($"Error al eliminar: {ex.Message}");
-        }
+        await InstalacionService.DeleteAsync(id);
+        await RefreshData();
+        ShowMessage("Instalación eliminada.", "success");
     }
 
     private void CancelEdit()
     {
-        editingInstalacion = null;
+        EditingInstalacion = null;
     }
 
-    private void ShowSuccess(string message)
+    private async Task RefreshData()
     {
-        statusMessage = message;
-        statusClass = "alert alert-success";
+        Instalaciones = await InstalacionService.GetAllAsync();
+        ApplyFilters();
         StateHasChanged();
-        _ = ClearStatusMessage();
     }
 
-    private void ShowError(string message)
+    private void ShowMessage(string message, string type)
     {
-        statusMessage = message;
-        statusClass = "alert alert-danger";
+        StatusMessage = message;
+        StatusMessageType = type;
         StateHasChanged();
-        _ = ClearStatusMessage();
+
+        // Limpiar mensaje después de 3 segundos
+        _ = Task.Delay(3000).ContinueWith(_ =>
+        {
+            StatusMessage = "";
+            StateHasChanged();
+        });
     }
 
-    private async Task ClearStatusMessage()
+    // Clase auxiliar para filtros
+    private class Filters
     {
-        await Task.Delay(5000);
-        statusMessage = "";
-        statusClass = "";
-        StateHasChanged();
+        public string Nombre { get; set; } = string.Empty;
+        public string Nivel { get; set; } = string.Empty;
+        public string Tipo { get; set; } = string.Empty;
     }
 }

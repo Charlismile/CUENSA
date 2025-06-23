@@ -1,0 +1,27 @@
+﻿@page "/gasto-enfermedad"
+<h3>Gasto por Enfermedad</h3>
+<table class="table">
+    <thead>
+    <tr><th>Enfermedad</th><th>Monto</th><th>Fecha</th></tr>
+    </thead>
+    <tbody>
+    @* @foreach (var item in gastos) *@
+    @* { *@
+    @*     <tr> *@
+    @*         <td>@item.Enfermedad.Nombre</td> *@
+    @*         <td>@item.Monto.ToString("C")</td> *@
+    @*         <td>@item.FechaReporte.ToShortDateString()</td> *@
+    @*     </tr> *@
+    @* } *@
+    </tbody>
+</table>
+
+@code {
+    // [Inject] private GastoEnfermedadService GastoEnfermedadService { get; set; }
+    // private List<GastoEnfermedad> gastos = new();
+    //
+    // protected override async Task OnInitializedAsync()
+    // {
+    //     gastos = await GastoEnfermedadService.GetAllAsync();
+    // }
+}

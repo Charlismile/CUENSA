@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SICUENSA.Models.Entities.BdSicuensa;
+namespace CUENSA.Models.Entities.BdSicuensa;
 
 public partial class Sha3
 {

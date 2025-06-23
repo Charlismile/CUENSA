@@ -1,0 +1,33 @@
+﻿@page "/mercado-farmaceutico"
+@inject IHttpClientFactory HttpClientFactory
+
+<h3>Mercado Farmacéutico</h3>
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>Medicamento</th>
+        <th>Cantidad</th>
+        <th>Monto (USD)</th>
+    </tr>
+    </thead>
+    <tbody>
+    @* @foreach (var item in medicamentos) *@
+    @* { *@
+    @*     <tr> *@
+    @*         <td>@item.Medicamento</td> *@
+    @*         <td>@item.CantidadUnidades</td> *@
+    @*         <td>@item.Monto.ToString("N2")</td> *@
+    @*     </tr> *@
+    @* } *@
+    </tbody>
+</table>
+
+@code {
+    // private List<GastoFarmaceutico> medicamentos = new();
+    //
+    // protected override async Task OnInitializedAsync()
+    // {
+    //     var client = HttpClientFactory.CreateClient();
+    //     medicamentos = await client.GetFromJsonAsync<List<GastoFarmaceutico>>("api/gasto-farmaceutico");
+    // }
+}

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SICUENSA.Models.Entities.BdSicuensa;
+namespace CUENSA.Models.Entities.BdSicuensa;
 
 public partial class Sha2
 {
@@ -10,5 +10,4 @@ public partial class Sha2
     public string? Codigo { get; set; }
 
     public double? Sha1Id { get; set; }
-    
 }

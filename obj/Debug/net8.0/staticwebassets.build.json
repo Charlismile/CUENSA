@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OBglxy6hWMYnInO1dV3QqxC1TJbof3hWkHGyboG4BPE=",
+  "Hash": "d6gNzL/B/OH6ABzDqfZqqp7gOBw350U2RdVUGeexKrs=",
   "Source": "CUENSA",
   "BasePath": "_content/CUENSA",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "CUENSA\\wwwroot",
       "Source": "CUENSA",
-      "ContentRoot": "C:\\Users\\carlo\\RiderProjects\\CUENSA\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\wwwroot\\",
       "BasePath": "_content/CUENSA",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\Blazor.Bootstrap.7t9tbfaemk.bundle.scp.css",
+      "Identity": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\Blazor.Bootstrap.7t9tbfaemk.bundle.scp.css",
       "SourceId": "Blazor.Bootstrap",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\",
       "BasePath": "_content/Blazor.Bootstrap",
       "RelativePath": "Blazor.Bootstrap.7t9tbfaemk.bundle.scp.css",
       "AssetKind": "All",
@@ -35,13 +35,13 @@
       "Integrity": "FYJNevdgdMX4R7rEhQxDvKVdV5SyZSlRT4eVSU+Lgyk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\Blazor.Bootstrap.7t9tbfaemk.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\Blazor.Bootstrap.7t9tbfaemk.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.css",
+      "Identity": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.css",
       "SourceId": "Blazor.Bootstrap",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\",
       "BasePath": "_content/Blazor.Bootstrap",
       "RelativePath": "blazor.bootstrap.css",
       "AssetKind": "All",
@@ -56,13 +56,13 @@
       "Integrity": "jqE3jyGxWnCTc0Y7oGfHKZOpZM9udgb38MQGLaxmkNc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.css"
+      "OriginalItemSpec": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.css"
     },
     {
-      "Identity": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.js",
+      "Identity": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.js",
       "SourceId": "Blazor.Bootstrap",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\",
       "BasePath": "_content/Blazor.Bootstrap",
       "RelativePath": "blazor.bootstrap.js",
       "AssetKind": "All",
@@ -77,13 +77,13 @@
       "Integrity": "/56eGJ+O8AbP07k4uCOAQdLbbj1ZsrX1aBINOPS9IAM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.js"
+      "OriginalItemSpec": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.js"
     },
     {
-      "Identity": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.pdf.js",
+      "Identity": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.pdf.js",
       "SourceId": "Blazor.Bootstrap",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\",
       "BasePath": "_content/Blazor.Bootstrap",
       "RelativePath": "blazor.bootstrap.pdf.js",
       "AssetKind": "All",
@@ -98,13 +98,13 @@
       "Integrity": "oAIj2P0Z/6hTwjGA3OGvWLdxMP4KwE35+AQzWQTpxAg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.pdf.js"
+      "OriginalItemSpec": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.pdf.js"
     },
     {
-      "Identity": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.sortable-list.js",
+      "Identity": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.sortable-list.js",
       "SourceId": "Blazor.Bootstrap",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\",
       "BasePath": "_content/Blazor.Bootstrap",
       "RelativePath": "blazor.bootstrap.sortable-list.js",
       "AssetKind": "All",
@@ -119,13 +119,13 @@
       "Integrity": "du71NM6e2+m9l81ldV+Gbr74ER7Xx1GnJFg+rIY6OQU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.sortable-list.js"
+      "OriginalItemSpec": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.sortable-list.js"
     },
     {
-      "Identity": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.theme-switcher.js",
+      "Identity": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.theme-switcher.js",
       "SourceId": "Blazor.Bootstrap",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\",
       "BasePath": "_content/Blazor.Bootstrap",
       "RelativePath": "blazor.bootstrap.theme-switcher.js",
       "AssetKind": "All",
@@ -140,13 +140,13 @@
       "Integrity": "Hy2y6B5ohWPnmWg4c52+QUuZGTw8r09KtWKcaGiaa/k=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.theme-switcher.js"
+      "OriginalItemSpec": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.theme-switcher.js"
     },
     {
-      "Identity": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\icon\\128X128.png",
+      "Identity": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\icon\\128X128.png",
       "SourceId": "Blazor.Bootstrap",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\",
       "BasePath": "_content/Blazor.Bootstrap",
       "RelativePath": "icon/128X128.png",
       "AssetKind": "All",
@@ -161,13 +161,13 @@
       "Integrity": "J1yB7ftYf6PWiU1781eE0JHBGfd1MV/XlLaxpVy09RU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\icon\\128X128.png"
+      "OriginalItemSpec": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\icon\\128X128.png"
     },
     {
-      "Identity": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\pdfjs-4.0.379.min.js",
+      "Identity": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\pdfjs-4.0.379.min.js",
       "SourceId": "Blazor.Bootstrap",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\",
       "BasePath": "_content/Blazor.Bootstrap",
       "RelativePath": "pdfjs-4.0.379.min.js",
       "AssetKind": "All",
@@ -182,13 +182,13 @@
       "Integrity": "XX7we2CiSWzj3rsNtKFCod90LBYAJ3bo8rmu4EuN7SQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\pdfjs-4.0.379.min.js"
+      "OriginalItemSpec": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\pdfjs-4.0.379.min.js"
     },
     {
-      "Identity": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\pdfjs-4.0.379.worker.min.js",
+      "Identity": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\pdfjs-4.0.379.worker.min.js",
       "SourceId": "Blazor.Bootstrap",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\",
       "BasePath": "_content/Blazor.Bootstrap",
       "RelativePath": "pdfjs-4.0.379.worker.min.js",
       "AssetKind": "All",
@@ -203,13 +203,13 @@
       "Integrity": "JbwqIn9Fic7JuWyTXuNnAA1T0dYQ2tkTi9HhrSltUtQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\pdfjs-4.0.379.worker.min.js"
+      "OriginalItemSpec": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\pdfjs-4.0.379.worker.min.js"
     },
     {
-      "Identity": "C:\\Users\\carlo\\RiderProjects\\CUENSA\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CUENSA.styles.css",
+      "Identity": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CUENSA.styles.css",
       "SourceId": "CUENSA",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\carlo\\RiderProjects\\CUENSA\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/CUENSA",
       "RelativePath": "CUENSA#[.{fingerprint}]?.styles.css",
       "AssetKind": "All",
@@ -224,13 +224,13 @@
       "Integrity": "RZzh1oOoW2Sy8pdd+792tVNOXP5IVvsID8hJQxrs9/k=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\carlo\\RiderProjects\\CUENSA\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CUENSA.styles.css"
+      "OriginalItemSpec": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CUENSA.styles.css"
     },
     {
-      "Identity": "C:\\Users\\carlo\\RiderProjects\\CUENSA\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CUENSA.bundle.scp.css",
+      "Identity": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CUENSA.bundle.scp.css",
       "SourceId": "CUENSA",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\carlo\\RiderProjects\\CUENSA\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/CUENSA",
       "RelativePath": "CUENSA#[.{fingerprint}]!.bundle.scp.css",
       "AssetKind": "All",
@@ -245,13 +245,13 @@
       "Integrity": "w5mkqbDn7DPV0e3chDL6dSQes3Q/z9138nRtpiywEG0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\carlo\\RiderProjects\\CUENSA\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CUENSA.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CUENSA.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\carlo\\RiderProjects\\CUENSA\\wwwroot\\app.css",
+      "Identity": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\wwwroot\\app.css",
       "SourceId": "CUENSA",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\carlo\\RiderProjects\\CUENSA\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\wwwroot\\",
       "BasePath": "_content/CUENSA",
       "RelativePath": "app#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -269,10 +269,10 @@
       "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "C:\\Users\\carlo\\RiderProjects\\CUENSA\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\wwwroot\\bootstrap\\bootstrap.min.css",
       "SourceId": "CUENSA",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\carlo\\RiderProjects\\CUENSA\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\wwwroot\\",
       "BasePath": "_content/CUENSA",
       "RelativePath": "bootstrap/bootstrap.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -283,17 +283,17 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "6gzpyzhau4",
-      "Integrity": "SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=",
+      "Fingerprint": "76ubm5nr8r",
+      "Integrity": "gViP2YEALhGt9lFeuG/YvQjiK92KSt567OchbH4v2zQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\carlo\\RiderProjects\\CUENSA\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "CUENSA",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\carlo\\RiderProjects\\CUENSA\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\wwwroot\\",
       "BasePath": "_content/CUENSA",
       "RelativePath": "bootstrap/bootstrap.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -311,10 +311,73 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\carlo\\RiderProjects\\CUENSA\\wwwroot\\favicon.png",
+      "Identity": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\wwwroot\\costo.png",
       "SourceId": "CUENSA",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\carlo\\RiderProjects\\CUENSA\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\wwwroot\\",
+      "BasePath": "_content/CUENSA",
+      "RelativePath": "costo#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "xp8y153y6l",
+      "Integrity": "peWSgPW34lRMwNAyiGoucMyArI/9Qn8AXcsXQQ2OFcs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\costo.png"
+    },
+    {
+      "Identity": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\wwwroot\\cuensa.png",
+      "SourceId": "CUENSA",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\wwwroot\\",
+      "BasePath": "_content/CUENSA",
+      "RelativePath": "cuensa#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "qgkg1i7zuz",
+      "Integrity": "ZttUmPWV7oXGnsbd1xoNDCRcg9zmi8j4yA+cOHJvHWE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\cuensa.png"
+    },
+    {
+      "Identity": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\wwwroot\\cuentas.png",
+      "SourceId": "CUENSA",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\wwwroot\\",
+      "BasePath": "_content/CUENSA",
+      "RelativePath": "cuentas#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8ioyhiwka4",
+      "Integrity": "cBbbwyJH9MH058DbB7n6qfN+LBf8StSaeO2a2b9oSIo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\cuentas.png"
+    },
+    {
+      "Identity": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\wwwroot\\favicon.png",
+      "SourceId": "CUENSA",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\wwwroot\\",
       "BasePath": "_content/CUENSA",
       "RelativePath": "favicon#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -325,17 +388,38 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ifv42okdf2",
-      "Integrity": "4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=",
+      "Fingerprint": "tivpvu0jwc",
+      "Integrity": "1eJqOv4+64d1xTXLMMeErux9cBGUSiM6N4xZb4qZ1Sc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\wwwroot\\logo-gob.png",
+      "SourceId": "CUENSA",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\wwwroot\\",
+      "BasePath": "_content/CUENSA",
+      "RelativePath": "logo-gob#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "yo04fes8co",
+      "Integrity": "ggOMUaElUgNLWwSHBO5h1duBv/iyhiY3n4ZU38iMo+0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\logo-gob.png"
     }
   ],
   "Endpoints": [
     {
       "Route": "_content/Blazor.Bootstrap/blazor.bootstrap.5vmds449nb.js",
-      "AssetFile": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.js",
+      "AssetFile": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -380,7 +464,7 @@
     },
     {
       "Route": "_content/Blazor.Bootstrap/blazor.bootstrap.63oqyoiiv4.css",
-      "AssetFile": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.css",
+      "AssetFile": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -425,7 +509,7 @@
     },
     {
       "Route": "_content/Blazor.Bootstrap/Blazor.Bootstrap.7t9tbfaemk.bundle.scp.css",
-      "AssetFile": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\Blazor.Bootstrap.7t9tbfaemk.bundle.scp.css",
+      "AssetFile": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\Blazor.Bootstrap.7t9tbfaemk.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -470,7 +554,7 @@
     },
     {
       "Route": "_content/Blazor.Bootstrap/Blazor.Bootstrap.bundle.scp.css",
-      "AssetFile": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\Blazor.Bootstrap.7t9tbfaemk.bundle.scp.css",
+      "AssetFile": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\Blazor.Bootstrap.7t9tbfaemk.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -507,7 +591,7 @@
     },
     {
       "Route": "_content/Blazor.Bootstrap/blazor.bootstrap.css",
-      "AssetFile": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.css",
+      "AssetFile": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -544,7 +628,7 @@
     },
     {
       "Route": "_content/Blazor.Bootstrap/blazor.bootstrap.js",
-      "AssetFile": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.js",
+      "AssetFile": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -581,7 +665,7 @@
     },
     {
       "Route": "_content/Blazor.Bootstrap/blazor.bootstrap.pdf.ct0ej5e0q0.js",
-      "AssetFile": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.pdf.js",
+      "AssetFile": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.pdf.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -626,7 +710,7 @@
     },
     {
       "Route": "_content/Blazor.Bootstrap/blazor.bootstrap.pdf.js",
-      "AssetFile": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.pdf.js",
+      "AssetFile": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.pdf.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -663,7 +747,7 @@
     },
     {
       "Route": "_content/Blazor.Bootstrap/blazor.bootstrap.sortable-list.ezlxc6gzv3.js",
-      "AssetFile": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.sortable-list.js",
+      "AssetFile": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.sortable-list.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -708,7 +792,7 @@
     },
     {
       "Route": "_content/Blazor.Bootstrap/blazor.bootstrap.sortable-list.js",
-      "AssetFile": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.sortable-list.js",
+      "AssetFile": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.sortable-list.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -745,7 +829,7 @@
     },
     {
       "Route": "_content/Blazor.Bootstrap/blazor.bootstrap.theme-switcher.js",
-      "AssetFile": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.theme-switcher.js",
+      "AssetFile": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.theme-switcher.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -782,7 +866,7 @@
     },
     {
       "Route": "_content/Blazor.Bootstrap/blazor.bootstrap.theme-switcher.pisakkcwob.js",
-      "AssetFile": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.theme-switcher.js",
+      "AssetFile": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\blazor.bootstrap.theme-switcher.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -827,7 +911,7 @@
     },
     {
       "Route": "_content/Blazor.Bootstrap/icon/128X128.png",
-      "AssetFile": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\icon\\128X128.png",
+      "AssetFile": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\icon\\128X128.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -864,7 +948,7 @@
     },
     {
       "Route": "_content/Blazor.Bootstrap/icon/128X128.tngynhsog2.png",
-      "AssetFile": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\icon\\128X128.png",
+      "AssetFile": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\icon\\128X128.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -909,7 +993,7 @@
     },
     {
       "Route": "_content/Blazor.Bootstrap/pdfjs-4.0.379.min.j8zp7bt7w3.js",
-      "AssetFile": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\pdfjs-4.0.379.min.js",
+      "AssetFile": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\pdfjs-4.0.379.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -954,7 +1038,7 @@
     },
     {
       "Route": "_content/Blazor.Bootstrap/pdfjs-4.0.379.min.js",
-      "AssetFile": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\pdfjs-4.0.379.min.js",
+      "AssetFile": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\pdfjs-4.0.379.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -991,7 +1075,7 @@
     },
     {
       "Route": "_content/Blazor.Bootstrap/pdfjs-4.0.379.worker.min.79hai7knhw.js",
-      "AssetFile": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\pdfjs-4.0.379.worker.min.js",
+      "AssetFile": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\pdfjs-4.0.379.worker.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1036,7 +1120,7 @@
     },
     {
       "Route": "_content/Blazor.Bootstrap/pdfjs-4.0.379.worker.min.js",
-      "AssetFile": "C:\\Users\\carlo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\pdfjs-4.0.379.worker.min.js",
+      "AssetFile": "C:\\Users\\cabernalo\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\staticwebassets\\pdfjs-4.0.379.worker.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1073,7 +1157,7 @@
     },
     {
       "Route": "app.css",
-      "AssetFile": "C:\\Users\\carlo\\RiderProjects\\CUENSA\\wwwroot\\app.css",
+      "AssetFile": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\wwwroot\\app.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1094,7 +1178,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Jun 2025 07:26:59 GMT"
+          "Value": "Thu, 19 Jun 2025 21:03:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1110,7 +1194,7 @@
     },
     {
       "Route": "app.da95v2qkru.css",
-      "AssetFile": "C:\\Users\\carlo\\RiderProjects\\CUENSA\\wwwroot\\app.css",
+      "AssetFile": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\wwwroot\\app.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1131,7 +1215,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Jun 2025 07:26:59 GMT"
+          "Value": "Thu, 19 Jun 2025 21:03:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1154,8 +1238,8 @@
       ]
     },
     {
-      "Route": "bootstrap/bootstrap.min.6gzpyzhau4.css",
-      "AssetFile": "C:\\Users\\carlo\\RiderProjects\\CUENSA\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Route": "bootstrap/bootstrap.min.76ubm5nr8r.css",
+      "AssetFile": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\wwwroot\\bootstrap\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1164,7 +1248,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "162726"
+          "Value": "236503"
         },
         {
           "Name": "Content-Type",
@@ -1172,11 +1256,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=\""
+          "Value": "\"gViP2YEALhGt9lFeuG/YvQjiK92KSt567OchbH4v2zQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Jun 2025 07:26:59 GMT"
+          "Value": "Fri, 20 Jun 2025 15:52:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1186,7 +1270,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "6gzpyzhau4"
+          "Value": "76ubm5nr8r"
         },
         {
           "Name": "label",
@@ -1194,13 +1278,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0="
+          "Value": "sha256-gViP2YEALhGt9lFeuG/YvQjiK92KSt567OchbH4v2zQ="
         }
       ]
     },
     {
       "Route": "bootstrap/bootstrap.min.css",
-      "AssetFile": "C:\\Users\\carlo\\RiderProjects\\CUENSA\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "AssetFile": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\wwwroot\\bootstrap\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1209,7 +1293,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "162726"
+          "Value": "236503"
         },
         {
           "Name": "Content-Type",
@@ -1217,11 +1301,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=\""
+          "Value": "\"gViP2YEALhGt9lFeuG/YvQjiK92KSt567OchbH4v2zQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Jun 2025 07:26:59 GMT"
+          "Value": "Fri, 20 Jun 2025 15:52:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1231,13 +1315,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0="
+          "Value": "sha256-gViP2YEALhGt9lFeuG/YvQjiK92KSt567OchbH4v2zQ="
         }
       ]
     },
     {
       "Route": "bootstrap/bootstrap.min.css.8inm30yfxf.map",
-      "AssetFile": "C:\\Users\\carlo\\RiderProjects\\CUENSA\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "AssetFile": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1258,7 +1342,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Jun 2025 07:26:59 GMT"
+          "Value": "Thu, 19 Jun 2025 21:03:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1282,7 +1366,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.css.map",
-      "AssetFile": "C:\\Users\\carlo\\RiderProjects\\CUENSA\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "AssetFile": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1303,7 +1387,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Jun 2025 07:26:59 GMT"
+          "Value": "Thu, 19 Jun 2025 21:03:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1318,8 +1402,90 @@
       ]
     },
     {
+      "Route": "costo.png",
+      "AssetFile": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\wwwroot\\costo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "118310"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"peWSgPW34lRMwNAyiGoucMyArI/9Qn8AXcsXQQ2OFcs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 14:13:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-peWSgPW34lRMwNAyiGoucMyArI/9Qn8AXcsXQQ2OFcs="
+        }
+      ]
+    },
+    {
+      "Route": "costo.xp8y153y6l.png",
+      "AssetFile": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\wwwroot\\costo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "118310"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"peWSgPW34lRMwNAyiGoucMyArI/9Qn8AXcsXQQ2OFcs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 14:13:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xp8y153y6l"
+        },
+        {
+          "Name": "label",
+          "Value": "costo.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-peWSgPW34lRMwNAyiGoucMyArI/9Qn8AXcsXQQ2OFcs="
+        }
+      ]
+    },
+    {
       "Route": "CUENSA.bundle.scp.css",
-      "AssetFile": "C:\\Users\\carlo\\RiderProjects\\CUENSA\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CUENSA.bundle.scp.css",
+      "AssetFile": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CUENSA.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1340,7 +1506,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Jun 2025 07:37:47 GMT"
+          "Value": "Thu, 19 Jun 2025 21:03:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1355,8 +1521,90 @@
       ]
     },
     {
+      "Route": "cuensa.png",
+      "AssetFile": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\wwwroot\\cuensa.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10966722"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZttUmPWV7oXGnsbd1xoNDCRcg9zmi8j4yA+cOHJvHWE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 13:44:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZttUmPWV7oXGnsbd1xoNDCRcg9zmi8j4yA+cOHJvHWE="
+        }
+      ]
+    },
+    {
+      "Route": "cuensa.qgkg1i7zuz.png",
+      "AssetFile": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\wwwroot\\cuensa.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10966722"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZttUmPWV7oXGnsbd1xoNDCRcg9zmi8j4yA+cOHJvHWE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 13:44:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qgkg1i7zuz"
+        },
+        {
+          "Name": "label",
+          "Value": "cuensa.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZttUmPWV7oXGnsbd1xoNDCRcg9zmi8j4yA+cOHJvHWE="
+        }
+      ]
+    },
+    {
       "Route": "CUENSA.styles.css",
-      "AssetFile": "C:\\Users\\carlo\\RiderProjects\\CUENSA\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CUENSA.styles.css",
+      "AssetFile": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CUENSA.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1381,7 +1629,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Jun 2025 07:37:47 GMT"
+          "Value": "Thu, 19 Jun 2025 21:03:30 GMT"
         },
         {
           "Name": "Link",
@@ -1397,7 +1645,7 @@
     },
     {
       "Route": "CUENSA.vny127wleh.styles.css",
-      "AssetFile": "C:\\Users\\carlo\\RiderProjects\\CUENSA\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CUENSA.styles.css",
+      "AssetFile": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CUENSA.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1422,7 +1670,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Jun 2025 07:37:47 GMT"
+          "Value": "Thu, 19 Jun 2025 21:03:30 GMT"
         },
         {
           "Name": "Link",
@@ -1446,7 +1694,7 @@
     },
     {
       "Route": "CUENSA.xnat71gmqd.bundle.scp.css",
-      "AssetFile": "C:\\Users\\carlo\\RiderProjects\\CUENSA\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CUENSA.bundle.scp.css",
+      "AssetFile": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CUENSA.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1467,7 +1715,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Jun 2025 07:37:47 GMT"
+          "Value": "Thu, 19 Jun 2025 21:03:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1490,8 +1738,8 @@
       ]
     },
     {
-      "Route": "favicon.ifv42okdf2.png",
-      "AssetFile": "C:\\Users\\carlo\\RiderProjects\\CUENSA\\wwwroot\\favicon.png",
+      "Route": "cuentas.8ioyhiwka4.png",
+      "AssetFile": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\wwwroot\\cuentas.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1500,7 +1748,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1148"
+          "Value": "10849133"
         },
         {
           "Name": "Content-Type",
@@ -1508,11 +1756,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
+          "Value": "\"cBbbwyJH9MH058DbB7n6qfN+LBf8StSaeO2a2b9oSIo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Jun 2025 07:26:59 GMT"
+          "Value": "Mon, 23 Jun 2025 13:44:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1522,21 +1770,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "ifv42okdf2"
+          "Value": "8ioyhiwka4"
         },
         {
           "Name": "label",
-          "Value": "favicon.png"
+          "Value": "cuentas.png"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+          "Value": "sha256-cBbbwyJH9MH058DbB7n6qfN+LBf8StSaeO2a2b9oSIo="
         }
       ]
     },
     {
-      "Route": "favicon.png",
-      "AssetFile": "C:\\Users\\carlo\\RiderProjects\\CUENSA\\wwwroot\\favicon.png",
+      "Route": "cuentas.png",
+      "AssetFile": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\wwwroot\\cuentas.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1545,7 +1793,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1148"
+          "Value": "10849133"
         },
         {
           "Name": "Content-Type",
@@ -1553,11 +1801,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
+          "Value": "\"cBbbwyJH9MH058DbB7n6qfN+LBf8StSaeO2a2b9oSIo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Jun 2025 07:26:59 GMT"
+          "Value": "Mon, 23 Jun 2025 13:44:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1567,7 +1815,171 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+          "Value": "sha256-cBbbwyJH9MH058DbB7n6qfN+LBf8StSaeO2a2b9oSIo="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.png",
+      "AssetFile": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\wwwroot\\favicon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17669"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1eJqOv4+64d1xTXLMMeErux9cBGUSiM6N4xZb4qZ1Sc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 02 May 2025 18:18:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1eJqOv4+64d1xTXLMMeErux9cBGUSiM6N4xZb4qZ1Sc="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.tivpvu0jwc.png",
+      "AssetFile": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\wwwroot\\favicon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17669"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1eJqOv4+64d1xTXLMMeErux9cBGUSiM6N4xZb4qZ1Sc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 02 May 2025 18:18:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tivpvu0jwc"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1eJqOv4+64d1xTXLMMeErux9cBGUSiM6N4xZb4qZ1Sc="
+        }
+      ]
+    },
+    {
+      "Route": "logo-gob.png",
+      "AssetFile": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\wwwroot\\logo-gob.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12310"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ggOMUaElUgNLWwSHBO5h1duBv/iyhiY3n4ZU38iMo+0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 02 May 2025 18:18:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ggOMUaElUgNLWwSHBO5h1duBv/iyhiY3n4ZU38iMo+0="
+        }
+      ]
+    },
+    {
+      "Route": "logo-gob.yo04fes8co.png",
+      "AssetFile": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\wwwroot\\logo-gob.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12310"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ggOMUaElUgNLWwSHBO5h1duBv/iyhiY3n4ZU38iMo+0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 02 May 2025 18:18:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "yo04fes8co"
+        },
+        {
+          "Name": "label",
+          "Value": "logo-gob.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ggOMUaElUgNLWwSHBO5h1duBv/iyhiY3n4ZU38iMo+0="
         }
       ]
     }

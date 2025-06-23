@@ -4,7 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using CUENSA.Components;
 using CUENSA.Components.Account;
 using CUENSA.Data;
+using CUENSA.Models.Entities.BdSicuensa;
 using SICUENSA.Data;
+using SICUENSA.Repositories.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,10 +28,13 @@ builder.Services.AddAuthentication(options =>
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ??
                        throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+
+builder.Services.AddDbContext<DbContextSicuensa>(options =>
+    options.UseSqlServer(connectionString));
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
-
+builder.Services.AddScoped<InstalacionService>();
 builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddSignInManager()

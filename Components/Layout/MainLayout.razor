@@ -1,15 +1,13 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="page">
-    <div class="sidebar">
-        <NavMenu/>
+<header>
+    <div class="container">
+        <img src="/logo-gob.png" class="img-fluid" alt="Gobierno Logo" style="height: 120px;">
     </div>
-
+    <NavMenu/>
+</header>
+<div class="page">
     <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
-        </div>
-
         <article class="content px-4">
             @Body
         </article>

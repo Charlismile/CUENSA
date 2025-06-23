@@ -25,6 +25,7 @@
 
     <ItemGroup>
       <Folder Include="Components\Pages\Admin\" />
+      <Folder Include="Models\DTOs\" />
       <Folder Include="Repositories\Interfaces\" />
     </ItemGroup>
 

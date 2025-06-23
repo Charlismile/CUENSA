@@ -1,0 +1,129 @@
+﻿<ul class="sidebar-nav">
+    <li class="sidebar-item">
+        <NavLink class="sidebar-link" href="/dashboard" Match="NavLinkMatch.All">
+            <i class="fa-solid fa-house pe-2"></i> Inicio
+        </NavLink>
+    </li>
+    <AuthorizeView Roles="user_permisos,user_admin">
+        <li class="sidebar-item">
+            <a
+                href="#"
+                class="sidebar-link collapsed"
+                data-bs-target="#permisos"
+                data-bs-toggle="collapse"
+                aria-expanded="false">
+                <i class="bi bi-clipboard-plus-fill pe-2"></i>
+                Permisos Sanitarios
+            </a>
+            <ul
+                id="permisos"
+                class="sidebar-dropdown list-unstyled px-3 collapse"
+                data-bs-parent="#sidebar">
+                <li class="sidebar-item">
+                    <NavLink href="/permisos-admin" class="sidebar-link">
+                        <i class="fa-solid fa-list pe-2"></i>Registrar permisos
+                    </NavLink>
+                </li>
+                <li class="sidebar-item">
+                    <NavLink href="/admin-empresas-licencias" class="sidebar-link">
+                        <i class="fa-solid fa-building pe-2"></i>Empresas
+                    </NavLink>
+                </li>
+            </ul>
+        </li>
+    </AuthorizeView>
+  
+    <ul class="sidebar-menu list-unstyled">
+        <AuthorizeView Roles="user_admin,user_registros,user_revision,user_public">
+            <Authorized>
+                <li class="sidebar-item">
+                    <a href="#"
+                       class="sidebar-link collapsed"
+                       data-bs-toggle="collapse"
+                       data-bs-target="#submenu-solicitudes"
+                       aria-expanded="false">
+                        <i class="bi bi-folder-fill pe-2"></i>
+                        Solicitudes
+                    </a>
+                    <ul id="submenu-solicitudes"
+                        class="sidebar-dropdown list-unstyled px-3 collapse"
+                        data-bs-parent="#sidebar">
+
+                        <AuthorizeView Roles="user_admin,user_registros">
+                            <Authorized Context="ctxReg">
+                                <li class="sidebar-item">
+                                    <NavLink href="/admin/solicitudes_registros" class="sidebar-link" Match="NavLinkMatch.All">
+                                        <i class="bi bi-clipboard2-plus-fill me-1"></i>Registros
+                                    </NavLink>
+                                </li>
+                                <li class="sidebar-item">
+                                    <NavLink href="/" class="sidebar-link">
+                                        <i class="bi bi-plus-circle-fill me-1"></i>Inscripciones
+                                    </NavLink>
+                                </li>
+                            </Authorized>
+                        </AuthorizeView>
+
+                        <AuthorizeView Roles="user_admin,user_revision">
+                            <Authorized Context="ctxRev">
+                                <li class="sidebar-item">
+                                    <NavLink href="/" class="sidebar-link">
+                                        <i class="fa-solid fa-table-list me-1"></i>Revisión
+                                    </NavLink>
+                                </li>
+                            </Authorized>
+                        </AuthorizeView>
+
+                        <AuthorizeView Roles="user_admin,user_public">
+                            <Authorized Context="ctxIns">
+                                <li class="sidebar-item">
+                                    <NavLink href="/FormInscripcion" class="sidebar-link">
+                                        <i class="bi bi-plus-circle-fill me-1"></i>Inscripciones Sustancias
+                                    </NavLink>
+                                </li>
+                            </Authorized>
+                        </AuthorizeView>
+
+                        <AuthorizeView Roles="user_admin,user_public">
+                            <Authorized Context="ctxOtr">
+                                <li class="sidebar-item">
+                                    <NavLink href="/" class="sidebar-link">
+                                        <i class="bi bi-info-circle-fill me-1"></i>Otras Opciones
+                                    </NavLink>
+                                </li>
+                            </Authorized>
+                        </AuthorizeView>
+                    </ul>
+                </li>
+            </Authorized>
+        </AuthorizeView>
+    </ul>
+    
+    <AuthorizeView Roles="user_admin">
+        <li class="sidebar-item">
+            <a
+                href="#"
+                class="sidebar-link collapsed"
+                data-bs-target="#administracion"
+                data-bs-toggle="collapse"
+                aria-expanded="false">
+                <i class="fa-solid fa-gear pe-2"></i>
+                Administración
+            </a>
+            <ul
+                id="administracion"
+                class="sidebar-dropdown list-unstyled px-3 collapse"
+                data-bs-parent="#sidebar">
+                <li class="sidebar-item">
+                    <NavLink href="/admin/users_registrados" class="sidebar-link">
+                        <i class="fa-solid fa-users-gear me-1"></i>Usuarios
+                    </NavLink>
+                </li>
+            </ul>
+        </li>
+    </AuthorizeView>
+</ul>
+
+@code {
+
+}
