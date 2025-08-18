@@ -72,23 +72,23 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\costo.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CUENSA.xnat71gmqd.bundle.scp.css'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CUENSA.6qt8iglsac.bundle.scp.css'))">
       <SourceType>Package</SourceType>
       <SourceId>CUENSA</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/CUENSA</BasePath>
-      <RelativePath>CUENSA.xnat71gmqd.bundle.scp.css</RelativePath>
+      <RelativePath>CUENSA.6qt8iglsac.bundle.scp.css</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>Reference</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName>ScopedCss</AssetTraitName>
       <AssetTraitValue>ProjectBundle</AssetTraitValue>
-      <Fingerprint>xnat71gmqd</Fingerprint>
-      <Integrity>w5mkqbDn7DPV0e3chDL6dSQes3Q/z9138nRtpiywEG0=</Integrity>
+      <Fingerprint>6qt8iglsac</Fingerprint>
+      <Integrity>fipTwvpAcJszl0DtnkIqW3t3tKmrdMRjtNgWrP4sAXg=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CUENSA.xnat71gmqd.bundle.scp.css'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CUENSA.6qt8iglsac.bundle.scp.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\cuensa.png'))">
       <SourceType>Package</SourceType>

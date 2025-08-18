@@ -1,0 +1,285 @@
+﻿@page "/Index"
+<body class="font-sans antialiased h-screen text-gray-900">
+
+<style class="dynamic-font-size">
+    .noticia-card-ocde {
+        position: relative;
+        border-radius: 12px;
+        overflow: hidden;
+        max-width: 550px;
+        margin: 0 auto;
+        min-height: 500px;
+        max-height: 550px;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+    }
+
+    .noticia-card-ocde img.imagen-top {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .etiqueta-fecha {
+        position: absolute;
+        top: 13px;
+        left: 13px;
+        color: white;
+        padding: 5px 12px;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 0.7rem;
+        z-index: 2;
+    }
+
+    .contenido {
+        padding: 20px 30px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .contenido .texto {
+        flex-grow: 1;
+    }
+
+    .contenido .boton {
+        display: block;
+        width: 100%;
+        padding: 10px 20px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        border-radius: 6px;
+        transition: 0.3s;
+    }
+
+    .contenido .boton:hover {
+        color: #fff;
+    }
+
+    .contenido h3 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .contenido p {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+        color: #555;
+        line-height: 1.4;
+        text-align: justify;
+    }
+</style>
+
+<div class="w-full dynamic-font-size">
+    <div class="w-full flex items-center gap-4 mt-3 mb-3">
+        <span class="w-16 h-16 flex-shrink-0">
+            <img class="w-full h-full object-cover" src="https://drive.google.com/thumbnail?id=1l0Ec07kwUKkJqABC4oscFVZO9zFwzkRx&amp;sz=w512-h512" alt="">
+        </span>
+        <div class="flex-grow">
+            <h6 class="font-bold uppercase text-gray-600 text-left text-3xl">
+                Bienvenidos
+            </h6>
+            <div class="w-full mt-px bg-blue-800" style="height: 3px"></div>
+        </div>
+    </div>
+    <div class="text-justify">
+        <p class="text-gray-600">La Oficina de <span class="text-blue-600">Información Económica en Salud</span> es
+            dependiente del <a href="https://desal.minsal.cl" class="text-gray-600 no-underline">Departamento de
+                Economía de la Salud (DESAL)</a>
+            perteneciente a la <a href="https://diplas.minsal.cl" class="text-gray-600 no-underline">División de
+                Planificación Sanitaria</a> de la Subsecretaría de Salud Pública del Ministerio de Salud.
+        </p>
+    </div>
+    <br>
+    <div class="text-justify">
+        <p class="text-gray-600">
+            Dentro de nuestras funciones se encuentran producir y mantener las series de estadísticas económicas del
+            sector Salud las cuales fomentan la disponibilidad, oportunidad y utilización de los datos; apoyar a las
+            autoridades o tomadores de decisión mediante información relacionada a financiamiento; asignación de
+            recursos en base a Estadísticas Económicas y contribuir a la discusión sobre decisiones de políticas
+            públicas relacionadas al gasto en salud a través del análisis sectorial.
+        </p>
+    </div>
+</div>
+
+<!-- ESTADISTICAS ECONOMICAS -->
+<div class="w-full dynamic-font-size">
+    <ul class="w-full grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 mt-5 gap-4 mb-10">
+        <div class="relative rounded-md shadow-md hover:shadow-2xl overflow-hidden">
+            <img src="https://drive.google.com/thumbnail?id=14HMyGTLiKaM4FwJE2bnpKnwbvFVP5QA4" alt="gasto-en-salud" class="absolute inset-0 w-full h-full object-cover">
+            <a href="https://ies.minsal.gob.cl/pages/74" class="relative z-10 p-3 gap-y-2 flex flex-col items-center justify-center blur-lg">
+                <h6 class="font-bold uppercase text-gray-900 text-center text-[1.119rem]">
+                    Gasto <br>en salud
+                </h6>
+                <span class="font-bold text-white text-center text-3xl" style="text-shadow: rgb(0, 0, 0) 1px 0 2px;">32.817.616</span>
+                <span class="font-bold text-xs text-white text-center" style="text-shadow: rgb(0, 0, 0) 1px 0 2px;">Millones de pesos <br>corrientes</span>
+                <span class="text-white text-center" style="text-shadow: rgb(0, 0, 0) 1px 0 1px;">Año 2024</span>
+                <span class="text-xs text-white text-center" style="text-shadow: rgb(0, 0, 0) 1px 0 1px;">(Actualización
+                    mayo 2025)</span>
+            </a>
+        </div>
+        <div class="relative rounded-md shadow-md hover:shadow-2xl overflow-hidden">
+            <img src="https://drive.google.com/thumbnail?id=1g4Qr-ADQXHZKidGj-gMs5P1KiWhAgMWD" alt="gasto-per-capita" class="absolute inset-0 w-full h-full object-cover">
+            <a href="https://ies.minsal.gob.cl/reports/205" class="relative z-10 p-3 gap-y-2 flex flex-col items-center justify-center blur-lg">
+                <h6 class="font-bold uppercase text-gray-900 text-center text-[1.119rem]">
+                    Gasto <br> per cápita
+                </h6>
+                <span class="font-bold text-white text-center text-3xl" style="text-shadow: rgb(0, 0, 0) 1px 0 2px;">1.633.825</span>
+                <span class="font-bold text-xs text-white text-center" style="text-shadow: rgb(0, 0, 0) 1px 0 2px;">Pesos <br>
+                    corrientes</span>
+                <span class="text-white text-center" style="text-shadow: rgb(0, 0, 0) 1px 0 2px;">Año 2024</span>
+                <span class="text-xs text-white text-center" style="text-shadow: rgb(0, 0, 0) 1px 0 2px;">(Actualización
+                    mayo 2025)</span>
+            </a>
+        </div>
+        <div class="relative rounded-md shadow-md hover:shadow-2xl overflow-hidden">
+            <img src="https://drive.google.com/thumbnail?id=1QztpGMmi0GAaVDW-QwBVB7j7b9WuR29o" alt="gasto-pib" class="absolute inset-0 w-full h-full object-cover">
+            <a href="https://ies.minsal.gob.cl/reports/200" class="relative z-10 p-3 gap-y-2 flex flex-col items-center justify-center blur-lg">
+                <h6 class="font-bold uppercase text-gray-900 text-center text-[1.119rem]">
+                    Participación<br>
+                    Salud en el PIB
+                </h6>
+                <span class="font-bold text-white text-center text-3xl" style="text-shadow: rgb(0, 0, 0) 1px 0 2px;">10,5%</span>
+                <span class="font-bold text-xs text-white text-center" style="text-shadow: rgb(0, 0, 0) 1px 0 2px;">en
+                    el <br>
+                    Año</span>
+                <span class="text-white text-center" style="text-shadow: rgb(0, 0, 0) 1px 0 2px;">2024</span>
+                <span class="text-xs text-white text-center" style="text-shadow: rgb(0, 0, 0) 1px 0 2px;">(Actualización
+                    mayo 2025)</span>
+            </a>
+        </div>
+        <div class="relative rounded-md shadow-md hover:shadow-2xl overflow-hidden">
+            <img src="https://drive.google.com/thumbnail?id=1IqKYe-FY8nSjqNCEdD-YL9yD_E6Y6IjZ" alt="gasto-pib" class="absolute inset-0 w-full h-full object-cover">
+            <a href="https://ies.minsal.gob.cl/pages/75" class="relative z-10 p-3 gap-y-2 flex flex-col items-center justify-center blur-lg">
+                <h6 class="font-bold uppercase text-gray-900 text-center text-[1.119rem]">
+                    Gasto<br>
+                    farmacéutico
+                </h6>
+                <span class="font-bold text-white text-center text-3xl" style="text-shadow: rgb(0, 0, 0) 1px 0 2px;">3.644.614</span>
+                <span class="font-bold text-xs text-white text-center" style="text-shadow: rgb(0, 0, 0) 1px 0 2px;">Millones de pesos <br>corrientes</span>
+                <span class="text-white text-center" style="text-shadow: rgb(0, 0, 0) 1px 0 2px;">Año 2024</span>
+                <span class="text-xs text-white text-center" style="text-shadow: rgb(0, 0, 0) 1px 0 2px;">(Actualización
+                    marzo <br>2025)</span>
+            </a>
+        </div>
+        <div class="relative rounded-md shadow-md hover:shadow-2xl overflow-hidden">
+            <img src="https://drive.google.com/thumbnail?id=12Bqxt4huIftJ3b013Wf3Lw_gDmWYC99W" alt="gasto-pib" class="absolute inset-0 w-full h-full object-cover">
+            <a href="https://ies.minsal.gob.cl/reports/177" class="relative z-10 p-3 gap-y-2 flex flex-col items-center justify-center blur-lg">
+                <h6 class="font-bold uppercase text-gray-900 text-center text-[1.119rem]">
+                    Gasto por enfermedad
+                </h6>
+                <span class="font-bold text-white text-center text-3xl" style="text-shadow: rgb(0, 0, 0) 1px 0 2px;">5.891.429</span>
+                <span class="text-xs text-white text-center" style="text-shadow: rgb(0, 0, 0) 1px 0 2px;">(Atención no
+                    ambulatoria)</span>
+                <span class="font-bold text-xs text-white text-center" style="text-shadow: rgb(0, 0, 0) 1px 0 2px;">Millones de pesos <br>corrientes</span>
+                <span class="text-white text-center" style="text-shadow: rgb(0, 0, 0) 1px 0 2px;">Año 2024</span>
+                <span class="text-xs text-white text-center" style="text-shadow: rgb(0, 0, 0) 1px 0 2px;">(Actualización
+                    julio 2025)</span>
+            </a>
+        </div>
+    </ul>
+</div>
+
+<!-- INDICADORES -->
+<div class="w-full mt-10 mb-10 dynamic-font-size">
+    <ul class="w-full flex flex-wrap place-items-center justify-around  gap-8">
+        <a href="https://ies.minsal.gob.cl/reports/244" class="w-32 flex flex-col items-center justify-center gap-1">
+            <span class="font-medium text-lg text-blue-800 text-xl">Indicadores</span>
+            <span class="w-16 h-16">
+                <img src="https://drive.google.com/thumbnail?id=1JM5YNOanVO9chhxlk95EgeKjGjLYEVkr&amp;sz=w128-h128" class="w-full h-full object-cover">
+            </span>
+        </a>
+        <a href="https://ies.minsal.gob.cl/pages/74" class="w-32 flex flex-col items-center justify-center gap-1">
+            <span class="font-medium text-lg text-blue-800 text-xl">Estadísticas</span>
+            <span class="w-16 h-16">
+                <img src="https://drive.google.com/thumbnail?id=1g0T5_ubGfIzbgx_k1abDOMXG69e5j3Wg&amp;sz=w128-h128" class="w-full h-full object-cover">
+            </span>
+        </a>
+        <a href="https://ies.minsal.gob.cl/pages/64" class="w-32 flex flex-col items-center justify-center gap-1">
+            <span class="font-medium text-lg text-blue-800 text-xl">Documentos</span>
+            <span class="w-16 h-16">
+                <img src="https://drive.google.com/thumbnail?id=1o_xHAw3WI7gfMtvOgGBNoYSiCnMcXjzA&amp;sz=w128-h128" class="w-full h-full object-cover">
+            </span>
+        </a>
+        <a href="https://ies.minsal.gob.cl/pages/76" class="w-32 flex flex-col items-center justify-center gap-1">
+            <span class="font-medium text-lg text-blue-800 text-xl">Boletines estadísticos</span>
+            <span class="w-16 h-16">
+                <img src="https://drive.google.com/thumbnail?id=1am1zQygVQ3XHVhMZvjPgQBBgfmN-P3R9&amp;sz=w128-h128" class="w-full h-full object-cover">
+            </span>
+        </a>
+        <a href="https://ies.minsal.gob.cl/pages/72" class="w-32 flex flex-col items-center justify-center gap-1">
+            <span class="font-medium text-lg text-blue-800 text-xl">Metodologías</span>
+            <span class="w-16 h-16">
+                <img src="https://drive.google.com/thumbnail?id=1kf2F857ZHCUN8vfmPeeeR9Kz1IQJjjQz&amp;sz=w128-h128" class="w-full h-full object-cover">
+            </span>
+        </a>
+    </ul>
+</div>
+
+
+<!-- NOTICIAS -->
+<div class="w-full dynamic-font-size">
+    <div class="w-full flex items-center gap-4 mt-3 mb-3">
+        <span class="w-16 h-16 flex-shrink-0">
+            <img class="w-full h-full object-cover" src="https://drive.google.com/thumbnail?id=1l0Ec07kwUKkJqABC4oscFVZO9zFwzkRx&amp;sz=w512-h512" alt="">
+        </span>
+        <div class="flex-grow">
+            <h6 class="font-bold uppercase text-gray-600 text-left text-3xl">
+                Novedades
+            </h6>
+            <div class="w-full mt-px bg-blue-800" style="height: 3px"></div>
+        </div>
+    </div>
+    <div class="grid grid-cols-2 gap-4">
+        <div class="noticia-card-ocde border border-color-[#808080] shadow-md hover:shadow-xl">
+            <img src="https://desal.minsal.cl/wp-content/uploads/2025/04/logoocdeok.jpg" class="imagen-top" alt="OCDE">
+            <div class="etiqueta-fecha bg-blue-800">Julio 2025</div>
+            <div class="contenido">
+                <div class="texto">
+                    <h3 class="font-semibold text-shadow-lg/20 text-shadow-black">
+                        <a class="text-shadow-lg/20 text-shadow-black" href="https://desal.minsal.cl/reporte-anual-de-chile-sobre-estadisticas-economicas-en-salud/">
+                           Reporte Anual de Chile sobre estadísticas económicas en salud
+                        </a>
+                    </h3>
+                    <p class="font-base text-shadow-lg/20 text-shadow-black">
+                        <a class="text-shadow-lg/20 text-shadow-black" href="https://desal.minsal.cl/estadisticas-economicas-reporte-anual-chile/">
+                           El Departamento de Economía de la Salud ha publicado y actualizado recientemente las estadísticas económicas en salud, las que son elaboradas anualmente y que también forman parte de los datos publicados por la Organización para la Cooperación y el Desarrollo Económico (OCDE) y Organización Mundial de la Salud (OMS) en sus plataformas estadísticas.
+                        </a>
+                    </p>
+                    <a href="https://desal.minsal.cl/reporte-anual-de-chile-sobre-estadisticas-economicas-en-salud/" class="boton bg-blue-800 hover:bg-red-800">
+                        Ver más
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="noticia-card-ocde border border-color-[#808080] shadow-md hover:shadow-xl">
+            <img src="https://desal.minsal.cl/wp-content/uploads/2025/07/visita-equipo.jpeg" class="imagen-top" alt="PARTICIPACIÓN">
+            <div class="etiqueta-fecha bg-blue-800">Julio 2025</div>
+            <div class="contenido">
+                <div class="texto">
+                    <h3 class="font-semibold text-shadow-lg/20 text-shadow-black">
+                        <a class="text-shadow-lg/20 text-shadow-black" href="https://desal.minsal.cl/departamento-de-economia-de-la-salud-se-reune-con-delegacion-del-ministerio-de-salud-de-republica-dominicana/">
+                           Departamento de Economía de la Salud se reúne con delegación del Ministerio de Salud de República Dominicana
+                        </a>
+                    </h3>
+                    <p class="font-base text-shadow-lg/20 text-shadow-black">
+                        <a class="text-shadow-lg/20 text-shadow-black" href="https://desal.minsal.cl/wp-content/uploads/2025/05/Infografia-Desde-el-Financiamiento-Provision-al-Consumo-Gasto-en-Salud.png">
+                            Desde el 28 al 30 de abril 2025, una delegación del Ministerio de Salud Pública de República Dominicana, encabezada por el viceministro de Fortalecimiento y Desarrollo del Sector Salud, Miguel Antonio Rodríguez Viñas, realizó una visita oficial a Chile con el propósito de conocer en mayor profundidad el funcionamiento del sistema de salud nacional. 
+                        </a>
+                    </p>
+                    <a href="https://desal.minsal.cl/departamento-de-economia-de-la-salud-se-reune-con-delegacion-del-ministerio-de-salud-de-republica-dominicana/" class="boton bg-blue-800 hover:bg-red-800 mt-2">
+                        Ver más
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&amp;ns=1&amp;cb=1773211663" async=""></script>
+
+</body>

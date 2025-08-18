@@ -176,12 +176,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cabernalo/Documents/PROJECT GIT/CUENSA/Components/Layout/Dashboard.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcRGFzaGJvYXJkLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/cabernalo/Documents/PROJECT GIT/CUENSA/Components/Layout/DashboardMenu.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcRGFzaGJvYXJkTWVudS5yYXpvcg==
+[C:/Users/cabernalo/Documents/PROJECT GIT/CUENSA/Components/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/cabernalo/Documents/PROJECT GIT/CUENSA/Components/Pages/Auth.razor]
@@ -196,28 +192,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cabernalo/Documents/PROJECT GIT/CUENSA/Components/Pages/Gastos/GastoEnfermedad.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xHYXN0b3NcR2FzdG9FbmZlcm1lZGFkLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/cabernalo/Documents/PROJECT GIT/CUENSA/Components/Pages/Gastos/GastoIndex.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xHYXN0b3NcR2FzdG9JbmRleC5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/cabernalo/Documents/PROJECT GIT/CUENSA/Components/Pages/Gastos/GastoTotal.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xHYXN0b3NcR2FzdG9Ub3RhbC5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/cabernalo/Documents/PROJECT GIT/CUENSA/Components/Pages/Gastos/MercadoFarmaceutico.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xHYXN0b3NcTWVyY2Fkb0Zhcm1hY2V1dGljby5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/cabernalo/Documents/PROJECT GIT/CUENSA/Components/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cabernalo/Documents/PROJECT GIT/CUENSA/Components/Pages/Instalaciones/InstalacionesIndex.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xJbnN0YWxhY2lvbmVzXEluc3RhbGFjaW9uZXNJbmRleC5yYXpvcg==
+[C:/Users/cabernalo/Documents/PROJECT GIT/CUENSA/Components/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xJbmRleC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cabernalo/Documents/PROJECT GIT/CUENSA/Components/Pages/Instalaciones/ShowInstalacion.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xJbnN0YWxhY2lvbmVzXFNob3dJbnN0YWxhY2lvbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/cabernalo/Documents/PROJECT GIT/CUENSA/Components/Routes.razor]
@@ -231,7 +219,3 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/cabernalo/Documents/PROJECT GIT/CUENSA/Components/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-bylin7sq71
-
-[C:/Users/cabernalo/Documents/PROJECT GIT/CUENSA/Components/Layout/NavMenu.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = b-3fsa44ap9m

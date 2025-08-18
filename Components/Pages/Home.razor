@@ -1,225 +1,405 @@
 ﻿@page "/"
+@using Microsoft.AspNetCore.Components.Web
 
-<PageTitle>SICUENSA</PageTitle>
+<PageTitle>SICUENSA - Sistema de Cuentas de Salud</PageTitle>
 
-<!-- Hero Section -->
-<section id="home" class="hero-section bg-gradient-primary text-white text-center py-5">
-    <div class="container">
-        <div class="row align-items-center justify-content-center">
-            <div class="col-lg-8">
-                <h1 class="display-4 fw-bold mb-3 animate-fadeInUp" style="animation-delay: 0.1s;">
-                    <span style="color: orange">Cuentas de Salud</span>
-                </h1>
-                <p class="lead mb-4 animate-fadeInUp" style="animation-delay: 0.2s;">
-                    Ministerio de Salud <br/>
-                    Dirección de Planificación de Salud - Departamento de 
-                    Economía de la Salud
-                </p>
-                <img src="cuentas.png" alt="Logo MINSAP" class="img-fluid mb-4 animate__animated animate__zoomIn" width="200"/>
+<body>
+    <!-- Hero Section -->
+<style>
+    .custom-card {
+        border-radius: 0.75rem;
+        color: white;
+        padding: 1rem;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .custom-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Degradados elegantes */
+    .card-gradient-primary {
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+    }
+
+    .card-gradient-success {
+        background: linear-gradient(135deg, #1d976c, #2cbf84);
+    }
+
+    .card-gradient-warning {
+        background: linear-gradient(135deg, #f6d365, #fda085);
+        color: #333;
+    }
+
+    .card-gradient-danger {
+        background: linear-gradient(135deg, #cb2d3e, #ef473a);
+    }
+
+    .card-gradient-info {
+        background: linear-gradient(135deg, #1488cc, #2b32b2);
+    }
+
+    .card-title {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+    }
+
+    .card-text {
+        font-size: 0.85rem;
+        opacity: 0.95;
+    }
+
+    .card-link {
+        font-weight: 500;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        padding-bottom: 2px;
+        transition: border-color 0.2s ease;
+    }
+
+    .card-link:hover {
+        border-color: white;
+    }
+</style>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center mb-5 text-center">
+                <div class="col-lg-8">
+                    <h2 class="display-4 fw-bold mb-4 text-primary">
+                        ¿Qué son las Cuentas de Salud?
+                    </h2>
+                    <div class="section-divider"></div>
+                    <p class="lead text-muted fs-5">
+                        "Las cuentas de salud presentan una descripción sistemática de los flujos financieros 
+                        relativos al consumo de los bienes y servicios de salud."
+                    </p>
+                    <p class="text-muted">
+                        Su intención es describir la salud desde la perspectiva del gasto, otorgando más importancia 
+                        al consumo final de bienes y servicios de la población que a la producción.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Three Dimensions Cards -->
+            <div class="row g-4 justify-content-center mb-5">
+                <div class="col-md-4">
+                    <div class="card card-hover h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon bg-primary-gradient">
+                                <i class="bi bi-coin"></i>
+                            </div>
+                            <h5 class="card-title fw-bold mb-3">Financiamiento</h5>
+                            <p class="card-text text-muted">
+                                Esquemas del financiamiento de la salud, incluyendo fuentes públicas, 
+                                privadas y de seguridad social.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-hover h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon bg-success-gradient">
+                                <i class="bi bi-graph-up-arrow"></i>
+                            </div>
+                            <h5 class="card-title fw-bold mb-3">Consumo</h5>
+                            <p class="card-text text-muted">
+                                Esquemas de las funciones de salud, clasificando los servicios 
+                                según su propósito y características.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-hover h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon bg-warning-gradient">
+                                <i class="bi bi-hospital"></i>
+                            </div>
+                            <h5 class="card-title fw-bold mb-3">Provisión</h5>
+                            <p class="card-text text-muted">
+                                Esquema de los proveedores de atención de salud, tanto públicos 
+                                como privados.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--card section-->
+    <div class="container py-5">
+    <div class="row g-3">
+        <div class="col-md-3">
+            <div class="card custom-card card-gradient-primary">
+                <div class="card-body">
+                    <h4 class="card-title">📊 Gasto corriente distribuido</h4>
+                    <p class="card-text">Distribución de proporciones relativas de factores.</p>
+                    <a href="#" class="card-link text-white">Ver más</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card custom-card card-gradient-success">
+                <div class="card-body">
+                    <h4 class="card-title">💼 Remuneraciones</h4>
+                    <p class="card-text">Gasto en asalariados y trabajadores autónomos.</p>
+                    <a href="#" class="card-link text-white">Ver más</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <div class="card custom-card card-gradient-warning">
+                <div class="card-body">
+                    <h4 class="card-title">🏥 Proveedores</h4>
+                    <p class="card-text">% de gasto por tipo de proveedor.</p>
+                    <a href="#" class="card-link text-dark">Ver más</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <div class="card custom-card card-gradient-danger">
+                <div class="card-body">
+                    <h4 class="card-title">📌 Esquemas</h4>
+                    <p class="card-text">% de gasto según tipo de esquema.</p>
+                    <a href="#" class="card-link text-white">Ver más</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <div class="card custom-card card-gradient-info">
+                <div class="card-body">
+                    <h4 class="card-title">💊 Farmacéutico</h4>
+                    <p class="card-text">Gasto farmacéutico total / gasto corriente.</p>
+                    <a href="#" class="card-link text-white">Ver más</a>
+                </div>
             </div>
         </div>
     </div>
-</section>
+</div>
 
-<!-- About Section -->
-<section id="about" class="py-5 bg-light">
-    <div class="container">
-        <div class="row justify-content-center mb-5 text-center">
-            <div class="col-lg-8">
-                <h2 class="display-5 fw-bold mb-3">(Metodología SHA 2011)</h2>
-                <p class="lead text-muted">
-                    “Las cuentas de salud presentan una descripción sistemática de los flujos financieros relativos al consumo de 
-                    los bienes y servicios de salud.” Su intención es describir la salud desde la perspectiva del gasto.
-                </p>
-            </div>
-        </div>
-        <div class="row g-4 justify-content-center">
-            <div class="col-md-4">
-                <div class="card border-0 shadow-sm hover-lift h-100 transition">
-                    <div class="card-body text-center p-4">
-                        <div class="feature-icon bg-primary rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
-                            <i class="bi bi-coin text-white fs-4"></i>
-                        </div>
-                        <h5 class="card-title fw-bold">Financiamiento</h5>
-                        <p class="card-text text-muted">Esquemas del financiamiento</p>
-                    </div>
+    <!-- Services Section -->
+    <section id="services" class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center mb-5 text-center">
+                <div class="col-lg-8">
+                    <h2 class="display-4 fw-bold mb-4 text-primary">Servicios del Sistema</h2>
+                    <div class="section-divider"></div>
+                    <p class="lead text-muted">
+                        Nuestro sistema ofrece análisis comprehensivos del gasto en salud 
+                        para la toma de decisiones informadas.
+                    </p>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card border-0 shadow-sm hover-lift h-100 transition">
-                    <div class="card-body text-center p-4">
-                        <div class="feature-icon bg-success rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
-                            <i class="bi bi-graph-up-arrow text-white fs-4"></i>
-                        </div>
-                        <h5 class="card-title fw-bold">Consumo</h5>
-                        <p class="card-text text-muted">Esquemas de las funciones de salud</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card border-0 shadow-sm hover-lift h-100 transition">
-                    <div class="card-body text-center p-4">
-                        <div class="feature-icon bg-warning rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
-                            <i class="bi bi-pause text-white fs-4"></i>
-                        </div>
-                        <h5 class="card-title fw-bold">Provisión</h5>
-                        <p class="card-text text-muted">Esquema de los proveedores de atención de salud</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- Services Section -->
-<section id="services" class="py-5">
-    <div class="container">
-        <div class="row justify-content-center mb-5 text-center">
-            <div class="col-lg-8">
-                <h2 class="display-5 fw-bold mb-3">Cuentas de Salud</h2>
-                <p class="lead text-muted">
-                    Otorgan más importancia al consumo final de bienes y servicios de la población que a la producción.
-                    Se asocian a tres dimensiones:
-                </p>
-            </div>
-        </div>
-        <div class="row g-4">
-            <div class="col-lg-6">
-                <div class="service-item d-flex align-items-start">
-                    <div class="service-icon flex-shrink-0 me-4">
-                        <div class="bg-info rounded-3 p-3">
-                            <i class="bi bi-person-arms-up text-white fs-4"></i>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card card-hover h-100 text-center">
+                        <div class="card-body p-4">
+                            <div class="feature-icon bg-primary-gradient">
+                                <i class="bi bi-pie-chart"></i>
+                            </div>
+                            <h6 class="fw-bold mb-2">Análisis de Gasto</h6>
+                            <p class="card-text small text-muted">
+                                Distribución del gasto corriente por factores y proporciones relativas
+                            </p>
                         </div>
                     </div>
-                    <div class="service-content">
-                        <h5 class="fw-bold mb-2">Fortaleza</h5>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="card card-hover h-100 text-center">
+                        <div class="card-body p-4">
+                            <div class="feature-icon bg-success-gradient">
+                                <i class="bi bi-people"></i>
+                            </div>
+                            <h6 class="fw-bold mb-2">Remuneraciones</h6>
+                            <p class="card-text small text-muted">
+                                Gasto en remuneraciones de asalariados y trabajadores autónomos
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="card card-hover h-100 text-center">
+                        <div class="card-body p-4">
+                            <div class="feature-icon bg-warning-gradient">
+                                <i class="bi bi-building"></i>
+                            </div>
+                            <h6 class="fw-bold mb-2">Proveedores</h6>
+                            <p class="card-text small text-muted">
+                                Análisis por tipo de proveedor y esquema de financiamiento
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="card card-hover h-100 text-center">
+                        <div class="card-body p-4">
+                            <div class="feature-icon bg-info-gradient">
+                                <i class="bi bi-capsule"></i>
+                            </div>
+                            <h6 class="fw-bold mb-2">Gasto Farmacéutico</h6>
+                            <p class="card-text small text-muted">
+                                Análisis del gasto farmacéutico total y corriente en salud
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center mb-5 text-center">
+                <div class="col-lg-8">
+                    <h2 class="display-4 fw-bold mb-4 text-primary">Contacto Institucional</h2>
+                    <div class="section-divider"></div>
+                    <p class="lead text-muted">
+                        Para consultas sobre el Sistema de Cuentas de Salud, contáctanos a través de los siguientes medios
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="contact-card">
+                        <i class="bi bi-geo-alt display-4 text-primary mb-3"></i>
+                        <h5 class="fw-bold mb-3">Dirección</h5>
                         <p class="text-muted mb-0">
-                            Analizar económicamente el sector salud estableciendo puntos de referencia, cambios y tendencias y comparativos con otros países de la región.
+                            <strong>Ministerio de Salud</strong><br>
+                            Dirección de Planificación de Salud<br>
+                            Ancón, Ciudad de Panamá
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="contact-card">
+                        <i class="bi bi-telephone display-4 text-success mb-3"></i>
+                        <h5 class="fw-bold mb-3">Teléfono</h5>
+                        <p class="text-muted mb-0">
+                            <strong>Oficina Principal:</strong><br>
+                            +507 512-9100<br>
+                            <small class="text-muted">Ext. Planificación</small>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="contact-card">
+                        <i class="bi bi-envelope display-4 text-warning mb-3"></i>
+                        <h5 class="fw-bold mb-3">Correo Electrónico</h5>
+                        <p class="text-muted mb-0">
+                            <strong>Departamento de Economía:</strong><br>
+                            economia.salud@minsa.gob.pa<br>
+                            <small class="text-muted">Consultas técnicas</small>
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="service-item d-flex align-items-start">
-                    <div class="service-icon flex-shrink-0 me-4">
-                        <div class="bg-primary rounded-3 p-3">
-                            <i class="bi bi-person-raised-hand text-white fs-4"></i>
-                        </div>
-                    </div>
-                    <div class="service-content">
-                        <h5 class="fw-bold mb-2">Oportunidades</h5>
-                        <p class="text-muted mb-0">
-                            Obtener información sobre el gasto para mejorar la calidad de los servicios de salud y atención a la población.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="service-item d-flex align-items-start">
-                    <div class="service-icon flex-shrink-0 me-4">
-                        <div class="bg-success rounded-3 p-3">
-                            <i class="bi bi-person-x text-white fs-4"></i>
-                        </div>
-                    </div>
-                    <div class="service-content">
-                        <h5 class="fw-bold mb-2">Debilidad</h5>
-                        <p class="text-muted mb-0">
-                            No se cuenta con la Institucionalización de las Cuentas de Salud.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="service-item d-flex align-items-start">
-                    <div class="service-icon flex-shrink-0 me-4">
-                        <div class="bg-warning rounded-3 p-3">
-                            <i class="bi bi-shield-fill-exclamation text-white fs-4"></i>
-                        </div>
-                    </div>
-                    <div class="service-content">
-                        <h5 class="fw-bold mb-2">Amenaza</h5>
-                        <ul class="text-muted mb-0">
-                            <li>Disponibilidad de los datos fiables en tiempo real y comparables.</li>
-                            <li>Limitación de los recursos (humano, tecnológico, financiero).</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Stats Section -->
-<section class="py-5 bg-primary text-white">
-    <div class="container">
-        <div class="row text-center g-4">
-            <div class="col-md-3">
-                <div class="stat-item p-3">
-                    <i class="bi bi-graph-up display-5 fw-bold mb-2"></i>
-                    <p class="mb-0 small">Gasto Corriente distribuido por factor (proporciones relativas)</p>
+    <!-- Footer -->
+    <footer class="footer-gov py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-shield-plus fs-2 me-3 text-warning"></i>
+                        <div>
+                            <h6 class="mb-0">SICUENSA</h6>
+                            <small class="text-light">Sistema de Cuentas de Salud</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0 small">
+                        © 2024 Ministerio de Salud - República de Panamá<br>
+                        <small class="text-light">Metodología SHA 2011 | Datos Abiertos de Gobierno</small>
+                    </p>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="stat-item p-3">
-                    <i class="bi bi-currency-exchange display-5 fw-bold mb-2"></i>
-                    <p class="mb-0 small">Gasto en Remuneraciones de asalariados + remuneraciones de trabajadores autónomos</p>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="stat-item p-3">
-                    <i class="bi bi-percent display-5 fw-bold mb-2"></i>
-                    <p class="mb-0 small">de Gasto por factores por tipo de proveedor</p>
-                    <p class="mb-0 small">de Gasto por factores según tipo de esquema</p>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="stat-item p-3">
-                    <i class="bi bi-currency-dollar display-5 fw-bold mb-2"></i>
-                    <p class="mb-0 small">Gasto farmacéutico total</p>
-                    <p class="mb-0 small">Gasto corriente en salud</p>
+            
+            <hr class="my-4 border-light">
+            
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0 small text-light">
+                        Desarrollado bajo los estándares de 
+                        <a href="https://www.datosabiertos.gob.pa" class="text-warning text-decoration-none">
+                            Datos Abiertos de Gobierno
+                        </a> | 
+                        <a href="#" class="text-warning text-decoration-none">Política de Privacidad</a> | 
+                        <a href="#" class="text-warning text-decoration-none">Términos de Uso</a>
+                    </p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </footer>
 
-<!-- Contact Section -->
-<section id="contact" class="py-5 bg-light">
-    <div class="container">
-        <div class="row justify-content-center mb-5 text-center">
-            <div class="col-lg-8">
-                <h2 class="display-5 fw-bold mb-4">Contáctanos</h2>
-                <p class="lead text-muted">¿Tienes preguntas? ¡Estamos aquí para ayudarte!</p>
-            </div>
-        </div>
-        <div class="row text-center">
-            <div class="col-md-4 mb-4">
-                <div class="card border-0 shadow-sm h-100 transition">
-                    <div class="card-body">
-                        <i class="bi bi-geo-alt display-5 text-primary mb-3"></i>
-                        <h5 class="fw-bold">Dirección</h5>
-                        <p class="text-muted">Ancon</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card border-0 shadow-sm h-100 transition">
-                    <div class="card-body">
-                        <i class="bi bi-telephone display-5 text-success mb-3"></i>
-                        <h5 class="fw-bold">Teléfono</h5>
-                        <p class="text-muted">+1 (555) 123-4567</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card border-0 shadow-sm h-100 transition">
-                    <div class="card-body">
-                        <i class="bi bi-envelope display-5 text-warning mb-3"></i>
-                        <h5 class="fw-bold">Email</h5>
-                        <p class="text-muted">contacto@ejemplo.com</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(30, 64, 175, 0.95)';
+                navbar.style.backdropFilter = 'blur(10px)';
+            } else {
+                navbar.style.background = 'linear-gradient(135deg, var(--primary-color) 0%, #1e3a8a 100%)';
+                navbar.style.backdropFilter = 'none';
+            }
+        });
+
+        // Add animation to cards when they come into view
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeIn 0.6s ease-in';
+                    entry.target.style.opacity = '1';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards
+        document.querySelectorAll('.card, .service-item, .stat-card').forEach(card => {
+            card.style.opacity = '0';
+            observer.observe(card);
+        });
+    </script>
+</body>

@@ -48,11 +48,17 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"xp8y153y6l"},{"Name":"integrity","Value":"sha256-peWSgPW34lRMwNAyiGoucMyArI/9Qn8AXcsXQQ2OFcs="},{"Name":"label","Value":"_content/CUENSA/costo.png"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"118310"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022peWSgPW34lRMwNAyiGoucMyArI/9Qn8AXcsXQQ2OFcs=\u0022"},{"Name":"Last-Modified","Value":"Mon, 23 Jun 2025 14:13:23 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/CUENSA/CUENSA.bundle.scp.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CUENSA.xnat71gmqd.bundle.scp.css'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/CUENSA/CUENSA.6qt8iglsac.bundle.scp.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CUENSA.6qt8iglsac.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-w5mkqbDn7DPV0e3chDL6dSQes3Q/z9138nRtpiywEG0="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"8183"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022w5mkqbDn7DPV0e3chDL6dSQes3Q/z9138nRtpiywEG0=\u0022"},{"Name":"Last-Modified","Value":"Thu, 19 Jun 2025 21:03:30 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"6qt8iglsac"},{"Name":"integrity","Value":"sha256-fipTwvpAcJszl0DtnkIqW3t3tKmrdMRjtNgWrP4sAXg="},{"Name":"label","Value":"_content/CUENSA/CUENSA.bundle.scp.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2181"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022fipTwvpAcJszl0DtnkIqW3t3tKmrdMRjtNgWrP4sAXg=\u0022"},{"Name":"Last-Modified","Value":"Fri, 08 Aug 2025 15:18:53 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/CUENSA/CUENSA.bundle.scp.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CUENSA.6qt8iglsac.bundle.scp.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-fipTwvpAcJszl0DtnkIqW3t3tKmrdMRjtNgWrP4sAXg="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2181"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022fipTwvpAcJszl0DtnkIqW3t3tKmrdMRjtNgWrP4sAXg=\u0022"},{"Name":"Last-Modified","Value":"Fri, 08 Aug 2025 15:18:53 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/CUENSA/cuensa.png">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\cuensa.png'))</AssetFile>
@@ -65,12 +71,6 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"qgkg1i7zuz"},{"Name":"integrity","Value":"sha256-ZttUmPWV7oXGnsbd1xoNDCRcg9zmi8j4yA\u002BcOHJvHWE="},{"Name":"label","Value":"_content/CUENSA/cuensa.png"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"10966722"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022ZttUmPWV7oXGnsbd1xoNDCRcg9zmi8j4yA\u002BcOHJvHWE=\u0022"},{"Name":"Last-Modified","Value":"Mon, 23 Jun 2025 13:44:42 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/CUENSA/CUENSA.xnat71gmqd.bundle.scp.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CUENSA.xnat71gmqd.bundle.scp.css'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"xnat71gmqd"},{"Name":"integrity","Value":"sha256-w5mkqbDn7DPV0e3chDL6dSQes3Q/z9138nRtpiywEG0="},{"Name":"label","Value":"_content/CUENSA/CUENSA.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"8183"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022w5mkqbDn7DPV0e3chDL6dSQes3Q/z9138nRtpiywEG0=\u0022"},{"Name":"Last-Modified","Value":"Thu, 19 Jun 2025 21:03:30 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/CUENSA/cuentas.8ioyhiwka4.png">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\cuentas.png'))</AssetFile>

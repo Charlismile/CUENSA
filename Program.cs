@@ -5,8 +5,10 @@ using CUENSA.Components;
 using CUENSA.Components.Account;
 using CUENSA.Data;
 using CUENSA.Models.Entities.BdSicuensa;
+using CUENSA.Repositories.Interfaces;
+using CUENSA.Repositories.Services;
 using SICUENSA.Data;
-using SICUENSA.Repositories.Services;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +20,13 @@ builder.Services.AddCascadingAuthenticationState();
 builder.Services.AddScoped<IdentityUserAccessor>();
 builder.Services.AddScoped<IdentityRedirectManager>();
 builder.Services.AddScoped<AuthenticationStateProvider, IdentityRevalidatingAuthenticationStateProvider>();
+builder.Services.AddScoped<ICommon, CommonServices>();
+
+builder.Services.AddDbContextFactory<DbContextSicuensa>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
+
 
 builder.Services.AddAuthentication(options =>
     {
@@ -34,7 +43,6 @@ builder.Services.AddDbContext<DbContextSicuensa>(options =>
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
-builder.Services.AddScoped<InstalacionService>();
 builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddSignInManager()

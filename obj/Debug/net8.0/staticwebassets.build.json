@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "d6gNzL/B/OH6ABzDqfZqqp7gOBw350U2RdVUGeexKrs=",
+  "Hash": "ubghjMSA6lNfR/cRY220mvVpFeOdJeIYWJsPP/L7a/U=",
   "Source": "CUENSA",
   "BasePath": "_content/CUENSA",
   "Mode": "Default",
@@ -220,8 +220,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "vny127wleh",
-      "Integrity": "RZzh1oOoW2Sy8pdd+792tVNOXP5IVvsID8hJQxrs9/k=",
+      "Fingerprint": "hs4e15uwjy",
+      "Integrity": "PzsAHogzqzzLqoD/M6Q6p/enNrKdub2qRC8EGOAQjKU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CUENSA.styles.css"
@@ -241,8 +241,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "xnat71gmqd",
-      "Integrity": "w5mkqbDn7DPV0e3chDL6dSQes3Q/z9138nRtpiywEG0=",
+      "Fingerprint": "6qt8iglsac",
+      "Integrity": "fipTwvpAcJszl0DtnkIqW3t3tKmrdMRjtNgWrP4sAXg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CUENSA.bundle.scp.css"
@@ -1484,6 +1484,51 @@
       ]
     },
     {
+      "Route": "CUENSA.6qt8iglsac.bundle.scp.css",
+      "AssetFile": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CUENSA.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2181"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fipTwvpAcJszl0DtnkIqW3t3tKmrdMRjtNgWrP4sAXg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 08 Aug 2025 15:18:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6qt8iglsac"
+        },
+        {
+          "Name": "label",
+          "Value": "CUENSA.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-fipTwvpAcJszl0DtnkIqW3t3tKmrdMRjtNgWrP4sAXg="
+        }
+      ]
+    },
+    {
       "Route": "CUENSA.bundle.scp.css",
       "AssetFile": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CUENSA.bundle.scp.css",
       "Selectors": [],
@@ -1494,7 +1539,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8183"
+          "Value": "2181"
         },
         {
           "Name": "Content-Type",
@@ -1502,11 +1547,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"w5mkqbDn7DPV0e3chDL6dSQes3Q/z9138nRtpiywEG0=\""
+          "Value": "\"fipTwvpAcJszl0DtnkIqW3t3tKmrdMRjtNgWrP4sAXg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 21:03:30 GMT"
+          "Value": "Fri, 08 Aug 2025 15:18:53 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1516,7 +1561,56 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-w5mkqbDn7DPV0e3chDL6dSQes3Q/z9138nRtpiywEG0="
+          "Value": "sha256-fipTwvpAcJszl0DtnkIqW3t3tKmrdMRjtNgWrP4sAXg="
+        }
+      ]
+    },
+    {
+      "Route": "CUENSA.hs4e15uwjy.styles.css",
+      "AssetFile": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CUENSA.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2264"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PzsAHogzqzzLqoD/M6Q6p/enNrKdub2qRC8EGOAQjKU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 08 Aug 2025 15:18:53 GMT"
+        },
+        {
+          "Name": "Link",
+          "Value": "<_content/Blazor.Bootstrap/Blazor.Bootstrap.7t9tbfaemk.bundle.scp.css>; rel=\"preload\"; as=\"style\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hs4e15uwjy"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PzsAHogzqzzLqoD/M6Q6p/enNrKdub2qRC8EGOAQjKU="
+        },
+        {
+          "Name": "label",
+          "Value": "CUENSA.styles.css"
         }
       ]
     },
@@ -1617,7 +1711,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8266"
+          "Value": "2264"
         },
         {
           "Name": "Content-Type",
@@ -1625,11 +1719,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"RZzh1oOoW2Sy8pdd+792tVNOXP5IVvsID8hJQxrs9/k=\""
+          "Value": "\"PzsAHogzqzzLqoD/M6Q6p/enNrKdub2qRC8EGOAQjKU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 21:03:30 GMT"
+          "Value": "Fri, 08 Aug 2025 15:18:53 GMT"
         },
         {
           "Name": "Link",
@@ -1639,101 +1733,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-RZzh1oOoW2Sy8pdd+792tVNOXP5IVvsID8hJQxrs9/k="
-        }
-      ]
-    },
-    {
-      "Route": "CUENSA.vny127wleh.styles.css",
-      "AssetFile": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CUENSA.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "8266"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"RZzh1oOoW2Sy8pdd+792tVNOXP5IVvsID8hJQxrs9/k=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 21:03:30 GMT"
-        },
-        {
-          "Name": "Link",
-          "Value": "<_content/Blazor.Bootstrap/Blazor.Bootstrap.7t9tbfaemk.bundle.scp.css>; rel=\"preload\"; as=\"style\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "vny127wleh"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-RZzh1oOoW2Sy8pdd+792tVNOXP5IVvsID8hJQxrs9/k="
-        },
-        {
-          "Name": "label",
-          "Value": "CUENSA.styles.css"
-        }
-      ]
-    },
-    {
-      "Route": "CUENSA.xnat71gmqd.bundle.scp.css",
-      "AssetFile": "C:\\Users\\cabernalo\\Documents\\PROJECT GIT\\CUENSA\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CUENSA.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "8183"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"w5mkqbDn7DPV0e3chDL6dSQes3Q/z9138nRtpiywEG0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 21:03:30 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "xnat71gmqd"
-        },
-        {
-          "Name": "label",
-          "Value": "CUENSA.bundle.scp.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-w5mkqbDn7DPV0e3chDL6dSQes3Q/z9138nRtpiywEG0="
+          "Value": "sha256-PzsAHogzqzzLqoD/M6Q6p/enNrKdub2qRC8EGOAQjKU="
         }
       ]
     },

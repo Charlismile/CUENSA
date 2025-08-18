@@ -318,7 +318,6 @@ C:\Users\cabernalo\Documents\PROJECT GIT\CUENSA\obj\Debug\net8.0\CUENSA.csproj.C
 C:\Users\cabernalo\Documents\PROJECT GIT\CUENSA\obj\Debug\net8.0\CUENSA.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\cabernalo\Documents\PROJECT GIT\CUENSA\obj\Debug\net8.0\CUENSA.sourcelink.json
 C:\Users\cabernalo\Documents\PROJECT GIT\CUENSA\obj\Debug\net8.0\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
-C:\Users\cabernalo\Documents\PROJECT GIT\CUENSA\obj\Debug\net8.0\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
 C:\Users\cabernalo\Documents\PROJECT GIT\CUENSA\obj\Debug\net8.0\scopedcss\bundle\CUENSA.styles.css
 C:\Users\cabernalo\Documents\PROJECT GIT\CUENSA\obj\Debug\net8.0\scopedcss\projectbundle\CUENSA.bundle.scp.css
 C:\Users\cabernalo\Documents\PROJECT GIT\CUENSA\obj\Debug\net8.0\staticwebassets.build.json

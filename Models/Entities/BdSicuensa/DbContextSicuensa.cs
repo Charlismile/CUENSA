@@ -15,50 +15,56 @@ public partial class DbContextSicuensa : DbContext
     {
     }
 
-    public virtual DbSet<Clasificacion> Clasificacion { get; set; }
+    public virtual DbSet<TbClasificacion> TbClasificacion { get; set; }
 
-    public virtual DbSet<Instalacion> Instalacion { get; set; }
+    public virtual DbSet<TbInstalacion> TbInstalacion { get; set; }
 
-    public virtual DbSet<Sha1> Sha1 { get; set; }
+    public virtual DbSet<TbSha1> TbSha1 { get; set; }
 
-    public virtual DbSet<Sha2> Sha2 { get; set; }
+    public virtual DbSet<TbSha2> TbSha2 { get; set; }
 
-    public virtual DbSet<Sha3> Sha3 { get; set; }
+    public virtual DbSet<TbSha3> TbSha3 { get; set; }
 
-    public virtual DbSet<Sha4> Sha4 { get; set; }
+    public virtual DbSet<TbSha4> TbSha4 { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder.UseSqlServer("Name=ConnectionStrings:DefaultConnection");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Clasificacion>(entity =>
+        modelBuilder.Entity<TbClasificacion>(entity =>
         {
-            entity.HasNoKey();
+            entity.HasKey(e => e.Id).HasName("PK__TbClasif__3213E83F18AA53AC");
 
+            entity.Property(e => e.Id)
+                .ValueGeneratedNever()
+                .HasColumnName("id");
             entity.Property(e => e.CodigoSha)
                 .HasMaxLength(255)
-                .HasColumnName("CodigoSHA");
-            entity.Property(e => e.CodigoShaId).HasColumnName("CodigoSHA_Id");
-            entity.Property(e => e.DescripciónSha)
+                .HasColumnName("codigoSHA");
+            entity.Property(e => e.CodigoShaId).HasColumnName("codigoSHA_id");
+            entity.Property(e => e.DescripcionSha)
                 .HasMaxLength(255)
-                .HasColumnName("Descripción SHA ");
+                .HasColumnName("descripcionSHA");
             entity.Property(e => e.F6).HasMaxLength(255);
-            entity.Property(e => e.InstalacionesMinsaCssPanamá)
+            entity.Property(e => e.InstalacionesMinsaCss)
                 .HasMaxLength(255)
-                .HasColumnName("Instalaciones MINSA - CSS Panamá");
+                .HasColumnName("instalacionesMinsaCss");
             entity.Property(e => e.Observaciones)
                 .HasMaxLength(255)
-                .HasColumnName("Observaciones ");
+                .HasColumnName("observaciones");
         });
 
-        modelBuilder.Entity<Instalacion>(entity =>
+        modelBuilder.Entity<TbInstalacion>(entity =>
         {
-            entity.HasNoKey();
+            entity.HasKey(e => e.InstalacionId).HasName("PK__TbInstal__14A69352A613FA6C");
 
+            entity.Property(e => e.InstalacionId)
+                .ValueGeneratedNever()
+                .HasColumnName("instalacion_id");
             entity.Property(e => e.ClasificacionCdSSha)
                 .HasMaxLength(255)
-                .HasColumnName("clasificacionCdS-SHA");
+                .HasColumnName("clasificacionCdS_SHA");
             entity.Property(e => e.ClasificacionCtasNacId).HasColumnName("clasificacionCtasNac_id");
             entity.Property(e => e.CodigoInstalacion).HasColumnName("codigoInstalacion");
             entity.Property(e => e.CodigoSha1)
@@ -77,14 +83,13 @@ public partial class DbContextSicuensa : DbContext
                 .HasMaxLength(255)
                 .HasColumnName("dependenciaInstalacion");
             entity.Property(e => e.DependenciaInstalacionId).HasColumnName("dependenciaInstalacion_id");
-            entity.Property(e => e.InstalacionSalud)
-                .HasMaxLength(255)
-                .HasColumnName("instalacionSalud");
-            entity.Property(e => e.InstalacionSaludId).HasColumnName("instalacionSalud_Id");
             entity.Property(e => e.NivelInstalacion)
                 .HasMaxLength(255)
                 .HasColumnName("nivelInstalacion");
             entity.Property(e => e.NivelInstalacionId).HasColumnName("nivelInstalacion_id");
+            entity.Property(e => e.NombreInstalacion)
+                .HasMaxLength(255)
+                .HasColumnName("nombreInstalacion");
             entity.Property(e => e.NomenclaturaSha)
                 .HasMaxLength(255)
                 .HasColumnName("nomenclaturaSHA");
@@ -98,50 +103,112 @@ public partial class DbContextSicuensa : DbContext
             entity.Property(e => e.TitularidadInstalacionId).HasColumnName("titularidadInstalacion_id");
         });
 
-        modelBuilder.Entity<Sha1>(entity =>
+        modelBuilder.Entity<TbSha1>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("SHA1");
+            entity.HasKey(e => e.Id).HasName("PK__TbSHA1__3213E83FF95D0D33");
 
+            entity.ToTable("TbSHA1");
+
+            entity.Property(e => e.Id)
+                .ValueGeneratedNever()
+                .HasColumnName("id");
             entity.Property(e => e.Codigo).HasMaxLength(255);
-            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.InstalacionId).HasColumnName("instalacion_id");
+
+            entity.HasOne(d => d.Instalacion).WithMany(p => p.TbSha1)
+                .HasForeignKey(d => d.InstalacionId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_TbSHA1_TbInstalacion");
         });
 
-        modelBuilder.Entity<Sha2>(entity =>
+        modelBuilder.Entity<TbSha2>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("SHA2");
+            entity.HasKey(e => e.Id).HasName("PK__TbSHA2__3213E83F04CF2314");
 
+            entity.ToTable("TbSHA2");
+
+            entity.Property(e => e.Id)
+                .ValueGeneratedNever()
+                .HasColumnName("id");
             entity.Property(e => e.Codigo).HasMaxLength(255);
-            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.InstalacionId).HasColumnName("instalacion_id");
             entity.Property(e => e.Sha1Id).HasColumnName("sha1_id");
+
+            entity.HasOne(d => d.Instalacion).WithMany(p => p.TbSha2)
+                .HasForeignKey(d => d.InstalacionId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_TbSHA2_TbInstalacion");
+
+            entity.HasOne(d => d.Sha1).WithMany(p => p.TbSha2)
+                .HasForeignKey(d => d.Sha1Id)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_TbSHA2_TbSHA1");
         });
 
-        modelBuilder.Entity<Sha3>(entity =>
+        modelBuilder.Entity<TbSha3>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("SHA3");
+            entity.HasKey(e => e.Id).HasName("PK__TbSHA3__3213E83F0356D792");
 
+            entity.ToTable("TbSHA3");
+
+            entity.Property(e => e.Id)
+                .ValueGeneratedNever()
+                .HasColumnName("id");
             entity.Property(e => e.Codigo).HasMaxLength(255);
-            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.InstalacionId).HasColumnName("instalacion_id");
             entity.Property(e => e.Sha1Id).HasColumnName("sha1_id");
             entity.Property(e => e.Sha2Id).HasColumnName("sha2_id");
+
+            entity.HasOne(d => d.Instalacion).WithMany(p => p.TbSha3)
+                .HasForeignKey(d => d.InstalacionId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_TbSHA3_TbInstalacion");
+
+            entity.HasOne(d => d.Sha1).WithMany(p => p.TbSha3)
+                .HasForeignKey(d => d.Sha1Id)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_TbSHA3_TbSHA1");
+
+            entity.HasOne(d => d.Sha2).WithMany(p => p.TbSha3)
+                .HasForeignKey(d => d.Sha2Id)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_TbSHA3_TbSHA2");
         });
 
-        modelBuilder.Entity<Sha4>(entity =>
+        modelBuilder.Entity<TbSha4>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("SHA4");
+            entity.HasKey(e => e.Id).HasName("PK__TbSHA4__3213E83F051841FD");
 
+            entity.ToTable("TbSHA4");
+
+            entity.Property(e => e.Id)
+                .ValueGeneratedNever()
+                .HasColumnName("id");
             entity.Property(e => e.Codigo).HasMaxLength(255);
-            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.InstalacionId).HasColumnName("instalacion_id");
             entity.Property(e => e.Sha1Id).HasColumnName("sha1_id");
             entity.Property(e => e.Sha2Id).HasColumnName("sha2_id");
             entity.Property(e => e.Sha3Id).HasColumnName("sha3_id");
+
+            entity.HasOne(d => d.Instalacion).WithMany(p => p.TbSha4)
+                .HasForeignKey(d => d.InstalacionId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_TbSHA4_TbInstalacion");
+
+            entity.HasOne(d => d.Sha1).WithMany(p => p.TbSha4)
+                .HasForeignKey(d => d.Sha1Id)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_TbSHA4_TbSHA1");
+
+            entity.HasOne(d => d.Sha2).WithMany(p => p.TbSha4)
+                .HasForeignKey(d => d.Sha2Id)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_TbSHA4_TbSHA2");
+
+            entity.HasOne(d => d.Sha3).WithMany(p => p.TbSha4)
+                .HasForeignKey(d => d.Sha3Id)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_TbSHA4_TbSHA3");
         });
 
         OnModelCreatingPartial(modelBuilder);
