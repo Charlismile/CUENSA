@@ -17,7 +17,15 @@ public partial class DbContextSicuensa : DbContext
 
     public virtual DbSet<TbClasificacion> TbClasificacion { get; set; }
 
+    public virtual DbSet<TbCorregimiento> TbCorregimiento { get; set; }
+
+    public virtual DbSet<TbDistrito> TbDistrito { get; set; }
+
     public virtual DbSet<TbInstalacion> TbInstalacion { get; set; }
+
+    public virtual DbSet<TbProvincia> TbProvincia { get; set; }
+
+    public virtual DbSet<TbRegionSalud> TbRegionSalud { get; set; }
 
     public virtual DbSet<TbSha1> TbSha1 { get; set; }
 
@@ -53,6 +61,28 @@ public partial class DbContextSicuensa : DbContext
             entity.Property(e => e.Observaciones)
                 .HasMaxLength(255)
                 .HasColumnName("observaciones");
+        });
+
+        modelBuilder.Entity<TbCorregimiento>(entity =>
+        {
+            entity.HasKey(e => e.CorregimientoId).HasName("PK__TbCorreg__5F50F1994EF75CD0");
+
+            entity.Property(e => e.NombreCorregimiento).HasMaxLength(150);
+
+            entity.HasOne(d => d.Distrito).WithMany(p => p.TbCorregimiento)
+                .HasForeignKey(d => d.DistritoId)
+                .HasConstraintName("FK_TbCorregimiento_TbDistrito");
+        });
+
+        modelBuilder.Entity<TbDistrito>(entity =>
+        {
+            entity.HasKey(e => e.DistritoId).HasName("PK__TbDistri__BE6ADADDA82E8FEA");
+
+            entity.Property(e => e.NombreDistrito).HasMaxLength(150);
+
+            entity.HasOne(d => d.Provincia).WithMany(p => p.TbDistrito)
+                .HasForeignKey(d => d.ProvinciaId)
+                .HasConstraintName("FK_TbDistrito_TbProvincia");
         });
 
         modelBuilder.Entity<TbInstalacion>(entity =>
@@ -101,6 +131,24 @@ public partial class DbContextSicuensa : DbContext
                 .HasMaxLength(255)
                 .HasColumnName("titularidadInstalacion");
             entity.Property(e => e.TitularidadInstalacionId).HasColumnName("titularidadInstalacion_id");
+        });
+
+        modelBuilder.Entity<TbProvincia>(entity =>
+        {
+            entity.HasKey(e => e.ProvinciaId).HasName("PK__TbProvin__F7CBC777F445F1AD");
+
+            entity.Property(e => e.NombreProvincia).HasMaxLength(150);
+
+            entity.HasOne(d => d.RegionSalud).WithMany(p => p.TbProvincia)
+                .HasForeignKey(d => d.RegionSaludId)
+                .HasConstraintName("FK_TbProvincia_TbRegionSalud");
+        });
+
+        modelBuilder.Entity<TbRegionSalud>(entity =>
+        {
+            entity.HasKey(e => e.RegionSaludId).HasName("PK__TbRegion__2B018A54055A8D1B");
+
+            entity.Property(e => e.NombreRegion).HasMaxLength(150);
         });
 
         modelBuilder.Entity<TbSha1>(entity =>

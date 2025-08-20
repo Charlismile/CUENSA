@@ -4,6 +4,7 @@ namespace CUENSA.Models.ModelsCuensa;
 
 public class InstalacionModel
 {
+    public int Id { get; set; }
     [Required(ErrorMessage = "El nombre de la instalación es obligatorio.")]
     [StringLength(200, ErrorMessage = "El nombre no puede superar los 200 caracteres.")]
     public string? NombreInstalacion { get; set; }

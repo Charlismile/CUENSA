@@ -5,10 +5,17 @@ namespace CUENSA.Repositories.Interfaces;
 
 public interface ICommon
 {
-    Task<List<TbInstalacion>> GetAllAsync();
-    Task<TbInstalacion?> GetByIdAsync(int id);
-    Task AddAsync(TbInstalacion instalacion);
-    Task UpdateAsync(TbInstalacion instalacion);
-    Task DeleteAsync(int id);
+    //Totales
+    Task<int> GetTotalInstalacionesAsync();
+    Task<int> GetTotalClasificacionesAsync();
     
+    Task<int> GetTotalRegionesAsync();
+    Task<int> GetTotalDistritosAsync();
+    Task<int> GetTotalCorregimientosAsync();
+    Task<int> GetTotalProvinciasAsync();
+    Task<int> GetTotalRegistrosAsync();
+    
+    // Agrupaciones
+    Task<Dictionary<string, int>> GetInstalacionesPorProvinciaAsync();
+    Task<Dictionary<string, int>> GetClasificacionesShaAsync();
 }

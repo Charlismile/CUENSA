@@ -3,312 +3,394 @@
 
 <PageTitle>SICUENSA - Sistema de Cuentas de Salud</PageTitle>
 
-<body>
+<div class="sicuensa-home">
     <!-- Hero Section -->
-<style>
-    .custom-card {
-        border-radius: 0.75rem;
-        color: white;
-        padding: 1rem;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .custom-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    }
-
-    /* Degradados elegantes */
-    .card-gradient-primary {
-        background: linear-gradient(135deg, #1e3c72, #2a5298);
-    }
-
-    .card-gradient-success {
-        background: linear-gradient(135deg, #1d976c, #2cbf84);
-    }
-
-    .card-gradient-warning {
-        background: linear-gradient(135deg, #f6d365, #fda085);
-        color: #333;
-    }
-
-    .card-gradient-danger {
-        background: linear-gradient(135deg, #cb2d3e, #ef473a);
-    }
-
-    .card-gradient-info {
-        background: linear-gradient(135deg, #1488cc, #2b32b2);
-    }
-
-    .card-title {
-        font-size: 1rem;
-        font-weight: 600;
-        margin-bottom: 0.75rem;
-    }
-
-    .card-text {
-        font-size: 0.85rem;
-        opacity: 0.95;
-    }
-
-    .card-link {
-        font-weight: 500;
-        text-decoration: none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-        padding-bottom: 2px;
-        transition: border-color 0.2s ease;
-    }
-
-    .card-link:hover {
-        border-color: white;
-    }
-</style>
+    <section class="hero-landing">
+        <div class="hero-background">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <span class="hero-badge">
+                            <i class="fas fa-shield-virus me-2"></i>
+                            SHA 2011 Certified
+                        </span>
+                        
+                        <h1 class="hero-title">
+                            <span class="title-highlight">SICUENSA</span>
+                            <span class="title-main">Sistema de Cuentas de Salud</span>
+                        </h1>
+                        
+                        <p class="hero-description">
+                            Plataforma integral para el análisis sistemático de flujos financieros 
+                            en salud, siguiendo la metodología internacional SHA 2011.
+                        </p>
+                        
+                        <div class="hero-actions">
+                            <a href="#about" class="btn-hero primary">
+                                <i class="fas fa-chart-line me-2"></i>
+                                Explorar Sistema
+                            </a>
+                            <a href="#contact" class="btn-hero secondary">
+                                <i class="fas fa-phone me-2"></i>
+                                Contactar
+                            </a>
+                        </div>
+                        
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">SHA 2011</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">3</span>
+                                <span class="stat-label">Dimensiones</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">5</span>
+                                <span class="stat-label">Indicadores</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="hero-visual">
+                        <div class="visual-container">
+                            <div class="main-circle">
+                                <div class="circle-content">
+                                    <i class="fas fa-heartbeat"></i>
+                                    <span>Salud</span>
+                                </div>
+                            </div>
+                            
+                            <div class="orbit orbit-1">
+                                <div class="orbit-item" data-tooltip="Financiamiento">
+                                    <i class="fas fa-coins"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="orbit orbit-2">
+                                <div class="orbit-item" data-tooltip="Consumo">
+                                    <i class="fas fa-chart-pie"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="orbit orbit-3">
+                                <div class="orbit-item" data-tooltip="Provisión">
+                                    <i class="fas fa-hospital"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- About Section -->
-    <section id="about" class="py-5 bg-light">
+    <section class="about-section">
         <div class="container">
-            <div class="row justify-content-center mb-5 text-center">
-                <div class="col-lg-8">
-                    <h2 class="display-4 fw-bold mb-4 text-primary">
-                        ¿Qué son las Cuentas de Salud?
-                    </h2>
-                    <div class="section-divider"></div>
-                    <p class="lead text-muted fs-5">
-                        "Las cuentas de salud presentan una descripción sistemática de los flujos financieros 
-                        relativos al consumo de los bienes y servicios de salud."
-                    </p>
-                    <p class="text-muted">
-                        Su intención es describir la salud desde la perspectiva del gasto, otorgando más importancia 
-                        al consumo final de bienes y servicios de la población que a la producción.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Three Dimensions Cards -->
-            <div class="row g-4 justify-content-center mb-5">
-                <div class="col-md-4">
-                    <div class="card card-hover h-100">
-                        <div class="card-body text-center p-4">
-                            <div class="feature-icon bg-primary-gradient">
-                                <i class="bi bi-coin"></i>
-                            </div>
-                            <h5 class="card-title fw-bold mb-3">Financiamiento</h5>
-                            <p class="card-text text-muted">
-                                Esquemas del financiamiento de la salud, incluyendo fuentes públicas, 
-                                privadas y de seguridad social.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card card-hover h-100">
-                        <div class="card-body text-center p-4">
-                            <div class="feature-icon bg-success-gradient">
-                                <i class="bi bi-graph-up-arrow"></i>
-                            </div>
-                            <h5 class="card-title fw-bold mb-3">Consumo</h5>
-                            <p class="card-text text-muted">
-                                Esquemas de las funciones de salud, clasificando los servicios 
-                                según su propósito y características.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card card-hover h-100">
-                        <div class="card-body text-center p-4">
-                            <div class="feature-icon bg-warning-gradient">
-                                <i class="bi bi-hospital"></i>
-                            </div>
-                            <h5 class="card-title fw-bold mb-3">Provisión</h5>
-                            <p class="card-text text-muted">
-                                Esquema de los proveedores de atención de salud, tanto públicos 
-                                como privados.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!--card section-->
-    <div class="container py-5">
-    <div class="row g-3">
-        <div class="col-md-3">
-            <div class="card custom-card card-gradient-primary">
-                <div class="card-body">
-                    <h4 class="card-title">📊 Gasto corriente distribuido</h4>
-                    <p class="card-text">Distribución de proporciones relativas de factores.</p>
-                    <a href="#" class="card-link text-white">Ver más</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="card custom-card card-gradient-success">
-                <div class="card-body">
-                    <h4 class="card-title">💼 Remuneraciones</h4>
-                    <p class="card-text">Gasto en asalariados y trabajadores autónomos.</p>
-                    <a href="#" class="card-link text-white">Ver más</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-2">
-            <div class="card custom-card card-gradient-warning">
-                <div class="card-body">
-                    <h4 class="card-title">🏥 Proveedores</h4>
-                    <p class="card-text">% de gasto por tipo de proveedor.</p>
-                    <a href="#" class="card-link text-dark">Ver más</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-2">
-            <div class="card custom-card card-gradient-danger">
-                <div class="card-body">
-                    <h4 class="card-title">📌 Esquemas</h4>
-                    <p class="card-text">% de gasto según tipo de esquema.</p>
-                    <a href="#" class="card-link text-white">Ver más</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-2">
-            <div class="card custom-card card-gradient-info">
-                <div class="card-body">
-                    <h4 class="card-title">💊 Farmacéutico</h4>
-                    <p class="card-text">Gasto farmacéutico total / gasto corriente.</p>
-                    <a href="#" class="card-link text-white">Ver más</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-    <!-- Services Section -->
-    <section id="services" class="py-5 bg-light">
-        <div class="container">
-            <div class="row justify-content-center mb-5 text-center">
-                <div class="col-lg-8">
-                    <h2 class="display-4 fw-bold mb-4 text-primary">Servicios del Sistema</h2>
-                    <div class="section-divider"></div>
-                    <p class="lead text-muted">
-                        Nuestro sistema ofrece análisis comprehensivos del gasto en salud 
-                        para la toma de decisiones informadas.
-                    </p>
-                </div>
-            </div>
-
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6">
-                    <div class="card card-hover h-100 text-center">
-                        <div class="card-body p-4">
-                            <div class="feature-icon bg-primary-gradient">
-                                <i class="bi bi-pie-chart"></i>
-                            </div>
-                            <h6 class="fw-bold mb-2">Análisis de Gasto</h6>
-                            <p class="card-text small text-muted">
-                                Distribución del gasto corriente por factores y proporciones relativas
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-6">
-                    <div class="card card-hover h-100 text-center">
-                        <div class="card-body p-4">
-                            <div class="feature-icon bg-success-gradient">
-                                <i class="bi bi-people"></i>
-                            </div>
-                            <h6 class="fw-bold mb-2">Remuneraciones</h6>
-                            <p class="card-text small text-muted">
-                                Gasto en remuneraciones de asalariados y trabajadores autónomos
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-6">
-                    <div class="card card-hover h-100 text-center">
-                        <div class="card-body p-4">
-                            <div class="feature-icon bg-warning-gradient">
-                                <i class="bi bi-building"></i>
-                            </div>
-                            <h6 class="fw-bold mb-2">Proveedores</h6>
-                            <p class="card-text small text-muted">
-                                Análisis por tipo de proveedor y esquema de financiamiento
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-6">
-                    <div class="card card-hover h-100 text-center">
-                        <div class="card-body p-4">
-                            <div class="feature-icon bg-info-gradient">
-                                <i class="bi bi-capsule"></i>
-                            </div>
-                            <h6 class="fw-bold mb-2">Gasto Farmacéutico</h6>
-                            <p class="card-text small text-muted">
-                                Análisis del gasto farmacéutico total y corriente en salud
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Contact Section -->
-    <section id="contact" class="py-5 bg-light">
-        <div class="container">
-            <div class="row justify-content-center mb-5 text-center">
-                <div class="col-lg-8">
-                    <h2 class="display-4 fw-bold mb-4 text-primary">Contacto Institucional</h2>
-                    <div class="section-divider"></div>
-                    <p class="lead text-muted">
-                        Para consultas sobre el Sistema de Cuentas de Salud, contáctanos a través de los siguientes medios
-                    </p>
-                </div>
+            <div class="section-header text-center">
+                <span class="section-badge">Fundamentos</span>
+                <h2 class="section-title">¿Qué son las Cuentas de Salud?</h2>
+                <div class="section-divider"></div>
             </div>
             
-            <div class="row g-4 justify-content-center">
-                <div class="col-lg-4 col-md-6">
-                    <div class="contact-card">
-                        <i class="bi bi-geo-alt display-4 text-primary mb-3"></i>
-                        <h5 class="fw-bold mb-3">Dirección</h5>
-                        <p class="text-muted mb-0">
-                            <strong>Ministerio de Salud</strong><br>
-                            Dirección de Planificación de Salud<br>
-                            Ancón, Ciudad de Panamá
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <div class="quote-container">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <blockquote class="main-quote">
+                            "Las cuentas de salud presentan una descripción sistemática 
+                            de los flujos financieros relativos al consumo de los bienes y servicios de salud."
+                        </blockquote>
+                        <p class="quote-explanation">
+                            Su intención es describir la salud desde la perspectiva del gasto, 
+                            otorgando más importancia al consumo final de bienes y servicios 
+                            de la población que a la producción.
                         </p>
                     </div>
                 </div>
+            </div>
+
+            <!-- Three Dimensions -->
+            <div class="dimensions-grid">
+                <div class="dimension-card" data-dimension="financiamiento">
+                    <div class="dimension-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <div class="dimension-content">
+                        <h3>Financiamiento</h3>
+                        <p>Esquemas del financiamiento de la salud, incluyendo fuentes públicas, privadas y de seguridad social.</p>
+                        <ul class="dimension-features">
+                            <li><i class="fas fa-check"></i>Fuentes públicas</li>
+                            <li><i class="fas fa-check"></i>Sector privado</li>
+                            <li><i class="fas fa-check"></i>Seguridad social</li>
+                        </ul>
+                    </div>
+                    <div class="dimension-overlay"></div>
+                </div>
                 
-                <div class="col-lg-4 col-md-6">
-                    <div class="contact-card">
-                        <i class="bi bi-telephone display-4 text-success mb-3"></i>
-                        <h5 class="fw-bold mb-3">Teléfono</h5>
-                        <p class="text-muted mb-0">
-                            <strong>Oficina Principal:</strong><br>
-                            +507 512-9100<br>
-                            <small class="text-muted">Ext. Planificación</small>
-                        </p>
+                <div class="dimension-card" data-dimension="consumo">
+                    <div class="dimension-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="dimension-content">
+                        <h3>Consumo</h3>
+                        <p>Esquemas de las funciones de salud, clasificando los servicios según su propósito y características.</p>
+                        <ul class="dimension-features">
+                            <li><i class="fas fa-check"></i>Clasificación de servicios</li>
+                            <li><i class="fas fa-check"></i>Análisis funcional</li>
+                            <li><i class="fas fa-check"></i>Propósito específico</li>
+                        </ul>
+                    </div>
+                    <div class="dimension-overlay"></div>
+                </div>
+                
+                <div class="dimension-card" data-dimension="provision">
+                    <div class="dimension-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <div class="dimension-content">
+                        <h3>Provisión</h3>
+                        <p>Esquema de los proveedores de atención de salud, tanto públicos como privados.</p>
+                        <ul class="dimension-features">
+                            <li><i class="fas fa-check"></i>Proveedores públicos</li>
+                            <li><i class="fas fa-check"></i>Sector privado</li>
+                            <li><i class="fas fa-check"></i>Análisis integral</li>
+                        </ul>
+                    </div>
+                    <div class="dimension-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Indicators Dashboard -->
+    <section class="indicators-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-badge">Indicadores Clave</span>
+                <h2 class="section-title">Panel de Control Financiero</h2>
+                <p class="section-description">
+                    Monitoreo en tiempo real de los principales indicadores del gasto en salud
+                </p>
+            </div>
+            
+            <div class="indicators-grid">
+                <div class="indicator-card large">
+                    <div class="card-header">
+                        <div class="card-icon primary">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <div class="card-info">
+                            <h4>Gasto Corriente Distribuido</h4>
+                            <span class="card-tag">Análisis Principal</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p>Distribución de proporciones relativas de factores en el sistema de salud.</p>
+                        <div class="progress-indicator">
+                            <div class="progress-bar" style="width: 85%"></div>
+                            <span class="progress-label">85% Completado</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">Ver Análisis Completo</a>
                     </div>
                 </div>
                 
-                <div class="col-lg-4 col-md-6">
-                    <div class="contact-card">
-                        <i class="bi bi-envelope display-4 text-warning mb-3"></i>
-                        <h5 class="fw-bold mb-3">Correo Electrónico</h5>
-                        <p class="text-muted mb-0">
-                            <strong>Departamento de Economía:</strong><br>
-                            economia.salud@minsa.gob.pa<br>
-                            <small class="text-muted">Consultas técnicas</small>
-                        </p>
+                <div class="indicator-card medium">
+                    <div class="card-header">
+                        <div class="card-icon success">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="card-info">
+                            <h4>Remuneraciones</h4>
+                            <span class="card-tag">Personal</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p>Gasto en asalariados y trabajadores autónomos del sector salud.</p>
+                        <div class="metric-display">
+                            <span class="metric-value">67%</span>
+                            <span class="metric-trend up">↗ +3.2%</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="card-link">Ver Detalles</a>
+                    </div>
+                </div>
+                
+                <div class="indicator-card small">
+                    <div class="card-header">
+                        <div class="card-icon warning">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="card-info">
+                            <h4>Proveedores</h4>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="metric-display">
+                            <span class="metric-value">42%</span>
+                        </div>
+                        <p>Gasto por tipo de proveedor</p>
+                    </div>
+                </div>
+                
+                <div class="indicator-card small">
+                    <div class="card-header">
+                        <div class="card-icon danger">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <div class="card-info">
+                            <h4>Esquemas</h4>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="metric-display">
+                            <span class="metric-value">58%</span>
+                        </div>
+                        <p>Gasto según esquema</p>
+                    </div>
+                </div>
+                
+                <div class="indicator-card small">
+                    <div class="card-header">
+                        <div class="card-icon info">
+                            <i class="fas fa-pills"></i>
+                        </div>
+                        <div class="card-info">
+                            <h4>Farmacéutico</h4>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="metric-display">
+                            <span class="metric-value">23%</span>
+                        </div>
+                        <p>Del gasto corriente total</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-badge">Capacidades</span>
+                <h2 class="section-title">Servicios del Sistema</h2>
+                <p class="section-description">
+                    Análisis comprehensivos del gasto en salud para la toma de decisiones informadas
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="service-content">
+                        <h5>Análisis de Gasto</h5>
+                        <p>Distribución del gasto corriente por factores y proporciones relativas</p>
+                    </div>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="service-content">
+                        <h5>Remuneraciones</h5>
+                        <p>Gasto en remuneraciones de asalariados y trabajadores autónomos</p>
+                    </div>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-clinic-medical"></i>
+                    </div>
+                    <div class="service-content">
+                        <h5>Proveedores</h5>
+                        <p>Análisis por tipo de proveedor y esquema de financiamiento</p>
+                    </div>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-capsules"></i>
+                    </div>
+                    <div class="service-content">
+                        <h5>Gasto Farmacéutico</h5>
+                        <p>Análisis del gasto farmacéutico total y corriente en salud</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-badge">Soporte</span>
+                <h2 class="section-title">Contacto Institucional</h2>
+                <p class="section-description">
+                    Para consultas sobre el Sistema de Cuentas de Salud
+                </p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-info">
+                        <h5>Dirección</h5>
+                        <div class="contact-details">
+                            <strong>Ministerio de Salud</strong>
+                            <span>Dirección de Planificación de Salud</span>
+                            <span>Ancón, Ciudad de Panamá</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-info">
+                        <h5>Teléfono</h5>
+                        <div class="contact-details">
+                            <strong>+507 512-9100</strong>
+                            <span>Oficina Principal</span>
+                            <span>Ext. Planificación</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-info">
+                        <h5>Correo Electrónico</h5>
+                        <div class="contact-details">
+                            <strong>economia.salud@minsa.gob.pa</strong>
+                            <span>Departamento de Economía</span>
+                            <span>Consultas técnicas</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -316,90 +398,782 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer-gov py-4">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <div class="d-flex align-items-center">
-                        <i class="bi bi-shield-plus fs-2 me-3 text-warning"></i>
-                        <div>
-                            <h6 class="mb-0">SICUENSA</h6>
-                            <small class="text-light">Sistema de Cuentas de Salud</small>
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="footer-brand">
+                            <div class="brand-icon">
+                                <i class="fas fa-shield-virus"></i>
+                            </div>
+                            <div class="brand-info">
+                                <h5>SICUENSA</h5>
+                                <span>Sistema de Cuentas de Salud</span>
+                            </div>
+                        </div>
+                        <p class="footer-description">
+                            Plataforma integral para el análisis de flujos financieros en salud, 
+                            implementando la metodología SHA 2011.
+                        </p>
+                    </div>
+                    
+                    <div class="col-lg-4">
+                        <h6 class="footer-title">Enlaces Útiles</h6>
+                        <ul class="footer-links">
+                            <li><a href="#about">¿Qué es SICUENSA?</a></li>
+                            <li><a href="#services">Servicios</a></li>
+                            <li><a href="#contact">Contacto</a></li>
+                            <li><a href="https://www.datosabiertos.gob.pa">Datos Abiertos</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-lg-4">
+                        <h6 class="footer-title">Certificaciones</h6>
+                        <div class="certifications">
+                            <div class="cert-item">
+                                <i class="fas fa-certificate"></i>
+                                <span>SHA 2011 Certified</span>
+                            </div>
+                            <div class="cert-item">
+                                <i class="fas fa-globe"></i>
+                                <span>Estándar Internacional</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 text-md-end">
-                    <p class="mb-0 small">
-                        © 2024 Ministerio de Salud - República de Panamá<br>
-                        <small class="text-light">Metodología SHA 2011 | Datos Abiertos de Gobierno</small>
-                    </p>
-                </div>
             </div>
-            
-            <hr class="my-4 border-light">
-            
-            <div class="row">
-                <div class="col-12 text-center">
-                    <p class="mb-0 small text-light">
-                        Desarrollado bajo los estándares de 
-                        <a href="https://www.datosabiertos.gob.pa" class="text-warning text-decoration-none">
-                            Datos Abiertos de Gobierno
-                        </a> | 
-                        <a href="#" class="text-warning text-decoration-none">Política de Privacidad</a> | 
-                        <a href="#" class="text-warning text-decoration-none">Términos de Uso</a>
-                    </p>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="copyright">
+                            © 2024 Ministerio de Salud - República de Panamá
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <div class="footer-legal">
+                            <a href="#">Política de Privacidad</a>
+                            <a href="#">Términos de Uso</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
+</div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        // Navbar background on scroll
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.style.background = 'rgba(30, 64, 175, 0.95)';
-                navbar.style.backdropFilter = 'blur(10px)';
-            } else {
-                navbar.style.background = 'linear-gradient(135deg, var(--primary-color) 0%, #1e3a8a 100%)';
-                navbar.style.backdropFilter = 'none';
-            }
-        });
+    .sicuensa-home {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        line-height: 1.6;
+        overflow-x: hidden;
+    }
 
-        // Add animation to cards when they come into view
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+    /* Hero Section */
+    .hero-landing {
+        position: relative;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+        color: white;
+        overflow: hidden;
+    }
 
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = 'fadeIn 0.6s ease-in';
-                    entry.target.style.opacity = '1';
-                }
-            });
-        }, observerOptions);
+    .hero-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
 
-        // Observe all cards
-        document.querySelectorAll('.card, .service-item, .stat-card').forEach(card => {
-            card.style.opacity = '0';
-            observer.observe(card);
-        });
-    </script>
-</body>
+    .floating-shapes {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .shape {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 50%;
+        animation: float 6s ease-in-out infinite;
+    }
+
+    .shape-1 {
+        width: 100px;
+        height: 100px;
+        top: 20%;
+        left: 10%;
+        animation-delay: 0s;
+    }
+
+    .shape-2 {
+        width: 60px;
+        height: 60px;
+        top: 60%;
+        right: 15%;
+        animation-delay: 2s;
+    }
+
+    .shape-3 {
+        width: 80px;
+        height: 80px;
+        bottom: 30%;
+        left: 70%;
+        animation-delay: 4s;
+    }
+
+    .shape-4 {
+        width: 120px;
+        height: 120px;
+        top: 40%;
+        right: 60%;
+        animation-delay: 1s;
+    }
+
+    @@keyframes float {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(180deg); }
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        padding: 2rem 0;
+    }
+
+    .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        background: rgba(59, 130, 246, 0.2);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(59, 130, 246, 0.3);
+        padding: 12px 24px;
+        border-radius: 50px;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 2rem;
+        color: #60a5fa;
+    }
+
+    .hero-title {
+        font-size: clamp(2.5rem, 6vw, 5rem);
+        font-weight: 900;
+        margin-bottom: 1.5rem;
+        line-height: 1.1;
+    }
+
+    .title-highlight {
+        display: block;
+        background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .title-main {
+        display: block;
+        color: white;
+        font-weight: 700;
+        font-size: 0.6em;
+        margin-top: 0.5rem;
+        opacity: 0.9;
+    }
+
+    .hero-description {
+        font-size: 1.25rem;
+        opacity: 0.8;
+        margin-bottom: 3rem;
+        max-width: 500px;
+        line-height: 1.7;
+    }
+
+    .hero-actions {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 3rem;
+        flex-wrap: wrap;
+    }
+
+    .btn-hero {
+        display: inline-flex;
+        align-items: center;
+        padding: 16px 32px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+    }
+
+    .btn-hero.primary {
+        background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        color: white;
+        box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+    }
+
+    .btn-hero.primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 15px 40px rgba(59, 130, 246, 0.6);
+        color: white;
+    }
+
+    .btn-hero.secondary {
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        border-color: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+    }
+
+    .btn-hero.secondary:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-color: rgba(255, 255, 255, 0.5);
+        color: white;
+        transform: translateY(-2px);
+    }
+
+    .hero-stats {
+        display: flex;
+        gap: 3rem;
+        flex-wrap: wrap;
+    }
+
+    .stat {
+        text-align: center;
+    }
+
+    .stat-number {
+        display: block;
+        font-size: 2.5rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .stat-label {
+        display: block;
+        font-size: 0.875rem;
+        opacity: 0.7;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    /* Hero Visual */
+    .hero-visual {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+    }
+
+    .visual-container {
+        position: relative;
+        width: 300px;
+        height: 300px;
+    }
+
+    .main-circle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 120px;
+        height: 120px;
+        background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 20px 40px rgba(59, 130, 246, 0.4);
+        z-index: 10;
+    }
+
+    .circle-content i {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .circle-content span {
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    .orbit {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 2px dashed rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        animation: rotate 20s linear infinite;
+    }
+
+    .orbit-1 {
+        width: 200px;
+        height: 200px;
+        animation-duration: 15s;
+    }
+
+    .orbit-2 {
+        width: 250px;
+        height: 250px;
+        animation-duration: 20s;
+        animation-direction: reverse;
+    }
+
+    .orbit-3 {
+        width: 300px;
+        height: 300px;
+        animation-duration: 25s;
+    }
+
+    .orbit-item {
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .orbit-item:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateX(-50%) scale(1.2);
+    }
+
+    @@keyframes rotate {
+        from { transform: translate(-50%, -50%) rotate(0deg); }
+        to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    /* About Section */
+    .about-section {
+        padding: 6rem 0;
+        background: linear-gradient(to bottom, #f8fafc, #fff);
+    }
+
+    .section-header {
+        margin-bottom: 4rem;
+    }
+
+    .section-badge {
+        display: inline-block;
+        background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        color: white;
+        padding: 8px 20px;
+        border-radius: 25px;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #0f172a;
+        margin-bottom: 1rem;
+    }
+
+    .section-divider {
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        border-radius: 2px;
+        margin: 1.5rem auto;
+    }
+
+    .section-description {
+        font-size: 1.125rem;
+        color: #64748b;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .quote-container {
+        background: white;
+        padding: 3rem;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        position: relative;
+        margin-bottom: 3rem;
+    }
+
+    .quote-icon {
+        font-size: 3rem;
+        color: #3b82f6;
+        opacity: 0.3;
+        position: absolute;
+        top: 1rem;
+        left: 2rem;
+    }
+
+    .main-quote {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #0f172a;
+        font-style: italic;
+        margin-bottom: 1.5rem;
+        position: relative;
+        z-index: 2;
+    }
+
+    .quote-explanation {
+        font-size: 1.1rem;
+        color: #64748b;
+        line-height: 1.7;
+    }
+
+    /* Dimensions Grid */
+    .dimensions-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .dimension-card {
+        background: white;
+        border-radius: 20px;
+        padding: 2rem;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .dimension-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    .dimension-icon {
+        font-size: 2rem;
+        color: #3b82f6;
+        margin-bottom: 1.5rem;
+    }
+
+    .dimension-content h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: #0f172a;
+    }
+
+    .dimension-content p {
+        font-size: 1rem;
+        color: #64748b;
+        margin-bottom: 1.5rem;
+    }
+
+    .dimension-features {
+        list-style: none;
+    }
+
+    .dimension-features li {
+        font-size: 0.95rem;
+        color: #0f172a;
+        margin-bottom: 0.5rem;
+    }
+
+    .dimension-features i {
+        color: #22c55e;
+        margin-right: 0.5rem;
+    }
+
+    /* Indicators Section */
+    .indicators-section {
+        padding: 6rem 0;
+        background: #f8fafc;
+    }
+
+    .indicators-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .indicator-card {
+        background: white;
+        border-radius: 20px;
+        padding: 1.5rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .indicator-card.large {
+        grid-column: span 2;
+    }
+
+    .card-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .card-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    .card-icon.primary { background: #3b82f6; }
+    .card-icon.success { background: #22c55e; }
+    .card-icon.warning { background: #f59e0b; }
+    .card-icon.danger { background: #ef4444; }
+    .card-icon.info { background: #06b6d4; }
+
+    .card-info h4 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 0.25rem;
+    }
+
+    .card-tag {
+        font-size: 0.8rem;
+        color: #64748b;
+    }
+
+    .progress-indicator {
+        margin-top: 1rem;
+        background: #e5e7eb;
+        border-radius: 8px;
+        overflow: hidden;
+        height: 12px;
+        position: relative;
+    }
+
+    .progress-bar {
+        height: 100%;
+        background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    }
+
+    .progress-label {
+        display: block;
+        margin-top: 0.5rem;
+        font-size: 0.85rem;
+        color: #64748b;
+    }
+
+    .metric-display {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #0f172a;
+    }
+
+    .metric-trend.up {
+        font-size: 0.9rem;
+        color: #22c55e;
+        margin-left: 0.5rem;
+    }
+
+    /* Services Section */
+    .services-section {
+        padding: 6rem 0;
+        background: white;
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .service-item {
+        background: #f8fafc;
+        border-radius: 16px;
+        padding: 2rem;
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+        transition: transform 0.3s ease;
+    }
+
+    .service-item:hover {
+        transform: translateY(-5px);
+    }
+
+    .service-icon {
+        font-size: 1.8rem;
+        color: #3b82f6;
+    }
+
+    .service-content h5 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+    }
+
+    .service-content p {
+        font-size: 0.95rem;
+        color: #64748b;
+    }
+
+    /* Contact Section */
+    .contact-section {
+        padding: 6rem 0;
+        background: linear-gradient(to right, #3b82f6, #8b5cf6);
+        color: white;
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .contact-card {
+        background: rgba(255,255,255,0.1);
+        border-radius: 16px;
+        padding: 2rem;
+        backdrop-filter: blur(10px);
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .contact-icon {
+        font-size: 1.5rem;
+        flex-shrink: 0;
+    }
+
+    .contact-info h5 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+    }
+
+    .contact-details {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    /* Footer */
+    .main-footer {
+        background: #0f172a;
+        color: #cbd5e1;
+    }
+
+    .footer-content {
+        padding: 4rem 0;
+    }
+
+    .footer-brand {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .brand-icon {
+        font-size: 2rem;
+        color: #3b82f6;
+    }
+
+    .brand-info h5 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 0.25rem;
+        color: white;
+    }
+
+    .footer-description {
+        font-size: 0.95rem;
+        max-width: 300px;
+    }
+
+    .footer-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: white;
+    }
+
+    .footer-links {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-links li {
+        margin-bottom: 0.5rem;
+    }
+
+    .footer-links a {
+        color: #cbd5e1;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+        color: #3b82f6;
+    }
+
+    .certifications {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .cert-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.95rem;
+    }
+
+    .cert-item i {
+        color: #3b82f6;
+    }
+
+    .footer-bottom {
+        padding: 1.5rem 0;
+        background: #1e293b;
+    }
+
+    .footer-legal a {
+        color: #cbd5e1;
+        margin-left: 1rem;
+        font-size: 0.9rem;
+        text-decoration: none;
+    }
+
+    .footer-legal a:hover {
+        color: #3b82f6;
+    }
+</style>

@@ -335,3 +335,9 @@ C:\Users\cabernalo\Documents\PROJECT GIT\CUENSA\obj\Debug\net8.0\refint\CUENSA.d
 C:\Users\cabernalo\Documents\PROJECT GIT\CUENSA\obj\Debug\net8.0\CUENSA.pdb
 C:\Users\cabernalo\Documents\PROJECT GIT\CUENSA\obj\Debug\net8.0\CUENSA.genruntimeconfig.cache
 C:\Users\cabernalo\Documents\PROJECT GIT\CUENSA\obj\Debug\net8.0\ref\CUENSA.dll
+C:\Users\cabernalo\Documents\PROJECT GIT\CUENSA\bin\Debug\net8.0\Blazorise.dll
+C:\Users\cabernalo\Documents\PROJECT GIT\CUENSA\bin\Debug\net8.0\Blazorise.Bootstrap.dll
+C:\Users\cabernalo\Documents\PROJECT GIT\CUENSA\bin\Debug\net8.0\Blazorise.Charts.dll
+C:\Users\cabernalo\Documents\PROJECT GIT\CUENSA\bin\Debug\net8.0\Blazorise.Icons.FontAwesome.dll
+C:\Users\cabernalo\Documents\PROJECT GIT\CUENSA\bin\Debug\net8.0\Blazorise.Licensing.dll
+C:\Users\cabernalo\Documents\PROJECT GIT\CUENSA\bin\Debug\net8.0\Lambda2Js.dll
