@@ -1,6 +1,5 @@
 using Blazorise;
 using Blazorise.Bootstrap;
-using Blazorise.Icons.FontAwesome;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -25,6 +24,9 @@ builder.Services.AddScoped<IdentityRedirectManager>();
 builder.Services.AddScoped<AuthenticationStateProvider, IdentityRevalidatingAuthenticationStateProvider>();
 builder.Services.AddScoped<ICommon, CommonServices>();
 
+//bootstrap
+builder.Services.AddBlazorBootstrap();
+
 // ELIMINADO: Registro duplicado de DbContextFactory
 
 builder.Services.AddAuthentication(options =>
@@ -43,12 +45,6 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
-
-// Charts
-builder.Services
-    .AddBlazorise(options => { options.Immediate = true; })
-    .AddBootstrapProviders()
-    .AddFontAwesomeIcons();
 
 // CORREGIDO: Configuración más completa de Identity
 builder.Services.AddIdentityCore<ApplicationUser>(options => 

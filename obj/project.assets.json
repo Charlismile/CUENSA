@@ -111,53 +111,6 @@
           "buildMultiTargeting/Blazorise.Bootstrap.props": {}
         }
       },
-      "Blazorise.Charts/1.8.1": {
-        "type": "package",
-        "dependencies": {
-          "Blazorise": "1.8.1",
-          "Lambda2Js": "3.1.4",
-          "Microsoft.AspNetCore.Components": "8.0.19",
-          "Microsoft.AspNetCore.Components.Web": "8.0.19",
-          "Microsoft.Extensions.Logging.Abstractions": "8.0.3"
-        },
-        "compile": {
-          "lib/net8.0/Blazorise.Charts.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/Blazorise.Charts.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/Blazorise.Charts.props": {}
-        },
-        "buildMultiTargeting": {
-          "buildMultiTargeting/Blazorise.Charts.props": {}
-        }
-      },
-      "Blazorise.Icons.FontAwesome/1.8.1": {
-        "type": "package",
-        "dependencies": {
-          "Blazorise": "1.8.1",
-          "Microsoft.AspNetCore.Components": "8.0.19",
-          "Microsoft.AspNetCore.Components.Web": "8.0.19",
-          "Microsoft.Extensions.Logging.Abstractions": "8.0.3"
-        },
-        "compile": {
-          "lib/net8.0/Blazorise.Icons.FontAwesome.dll": {}
-        },
-        "runtime": {
-          "lib/net8.0/Blazorise.Icons.FontAwesome.dll": {}
-        },
-        "build": {
-          "buildTransitive/Blazorise.Icons.FontAwesome.props": {}
-        },
-        "buildMultiTargeting": {
-          "buildMultiTargeting/Blazorise.Icons.FontAwesome.props": {}
-        }
-      },
       "Blazorise.Licensing/1.3.0": {
         "type": "package",
         "compile": {
@@ -207,19 +160,6 @@
         },
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Lambda2Js/3.1.4": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Lambda2Js.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Lambda2Js.dll": {
             "related": ".xml"
           }
         }
@@ -2211,83 +2151,6 @@
         "staticwebassets/tooltip.js"
       ]
     },
-    "Blazorise.Charts/1.8.1": {
-      "sha512": "/HJRPP+2qyVGv6ignIbEcr7e1C0Xqp/67pm99aUpCYJq6TEH2KcNxjJ3p6BThS4nfj/IqwN9POzxXyH21wuDVQ==",
-      "type": "package",
-      "path": "blazorise.charts/1.8.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Blazorise.png",
-        "LICENSE.md",
-        "blazorise.charts.1.8.1.nupkg.sha512",
-        "blazorise.charts.nuspec",
-        "build/Blazorise.Charts.props",
-        "build/Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
-        "build/Microsoft.AspNetCore.StaticWebAssets.props",
-        "buildMultiTargeting/Blazorise.Charts.props",
-        "buildTransitive/Blazorise.Charts.props",
-        "lib/net6.0/Blazorise.Charts.dll",
-        "lib/net6.0/Blazorise.Charts.xml",
-        "lib/net7.0/Blazorise.Charts.dll",
-        "lib/net7.0/Blazorise.Charts.xml",
-        "lib/net8.0/Blazorise.Charts.dll",
-        "lib/net8.0/Blazorise.Charts.xml",
-        "lib/net9.0/Blazorise.Charts.dll",
-        "lib/net9.0/Blazorise.Charts.xml",
-        "staticwebassets/charts.js",
-        "staticwebassets/utilities.js"
-      ]
-    },
-    "Blazorise.Icons.FontAwesome/1.8.1": {
-      "sha512": "Vw/5q/mp9sXzrGveobH6KZC0afWf3hQe0H2DhdvbkZunPT31gH9YTIR4/UKFapMkpT56/0WTHnxqlR0seklIUg==",
-      "type": "package",
-      "path": "blazorise.icons.fontawesome/1.8.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Blazorise.png",
-        "LICENSE.md",
-        "blazorise.icons.fontawesome.1.8.1.nupkg.sha512",
-        "blazorise.icons.fontawesome.nuspec",
-        "build/Blazorise.Icons.FontAwesome.props",
-        "build/Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
-        "build/Microsoft.AspNetCore.StaticWebAssets.props",
-        "buildMultiTargeting/Blazorise.Icons.FontAwesome.props",
-        "buildTransitive/Blazorise.Icons.FontAwesome.props",
-        "lib/net6.0/Blazorise.Icons.FontAwesome.dll",
-        "lib/net7.0/Blazorise.Icons.FontAwesome.dll",
-        "lib/net8.0/Blazorise.Icons.FontAwesome.dll",
-        "lib/net9.0/Blazorise.Icons.FontAwesome.dll",
-        "staticwebassets/v5/css/all.css",
-        "staticwebassets/v5/css/all.min.css",
-        "staticwebassets/v5/webfonts/fa-brands-400.eot",
-        "staticwebassets/v5/webfonts/fa-brands-400.svg",
-        "staticwebassets/v5/webfonts/fa-brands-400.ttf",
-        "staticwebassets/v5/webfonts/fa-brands-400.woff",
-        "staticwebassets/v5/webfonts/fa-brands-400.woff2",
-        "staticwebassets/v5/webfonts/fa-regular-400.eot",
-        "staticwebassets/v5/webfonts/fa-regular-400.svg",
-        "staticwebassets/v5/webfonts/fa-regular-400.ttf",
-        "staticwebassets/v5/webfonts/fa-regular-400.woff",
-        "staticwebassets/v5/webfonts/fa-regular-400.woff2",
-        "staticwebassets/v5/webfonts/fa-solid-900.eot",
-        "staticwebassets/v5/webfonts/fa-solid-900.svg",
-        "staticwebassets/v5/webfonts/fa-solid-900.ttf",
-        "staticwebassets/v5/webfonts/fa-solid-900.woff",
-        "staticwebassets/v5/webfonts/fa-solid-900.woff2",
-        "staticwebassets/v6/css/all.css",
-        "staticwebassets/v6/css/all.min.css",
-        "staticwebassets/v6/webfonts/fa-brands-400.ttf",
-        "staticwebassets/v6/webfonts/fa-brands-400.woff2",
-        "staticwebassets/v6/webfonts/fa-regular-400.ttf",
-        "staticwebassets/v6/webfonts/fa-regular-400.woff2",
-        "staticwebassets/v6/webfonts/fa-solid-900.ttf",
-        "staticwebassets/v6/webfonts/fa-solid-900.woff2",
-        "staticwebassets/v6/webfonts/fa-v4compatibility.ttf",
-        "staticwebassets/v6/webfonts/fa-v4compatibility.woff2"
-      ]
-    },
     "Blazorise.Licensing/1.3.0": {
       "sha512": "NvQlbUgd6jY/ZfkJPlhHLaMVyvfp24OMehFV8Y6mrqLHqC0CfcoE+6+YP9FZMZKNAWmcNZ85WXmYFWVl0UXGfw==",
       "type": "package",
@@ -2368,25 +2231,6 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
-      ]
-    },
-    "Lambda2Js/3.1.4": {
-      "sha512": "yxPJ5n+jUdjTZSItFj2wx5uFGm8iN6Gt42apqnEq0Zm5R6GgueZFFl+GDSe/CEogMSaBRw8kRG3yZm8ABFWXGQ==",
-      "type": "package",
-      "path": "lambda2js/3.1.4",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.txt",
-        "icon-512.png",
-        "lambda2js.3.1.4.nupkg.sha512",
-        "lambda2js.nuspec",
-        "lib/net40/Lambda2Js.dll",
-        "lib/net40/Lambda2Js.xml",
-        "lib/netstandard1.0/Lambda2Js.dll",
-        "lib/netstandard1.0/Lambda2Js.xml",
-        "lib/netstandard2.0/Lambda2Js.dll",
-        "lib/netstandard2.0/Lambda2Js.xml"
       ]
     },
     "Microsoft.AspNetCore.Authorization/8.0.19": {
@@ -5417,10 +5261,7 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "Blazor.Bootstrap >= 3.3.1",
-      "Blazorise >= 1.8.1",
       "Blazorise.Bootstrap >= 1.8.1",
-      "Blazorise.Charts >= 1.8.1",
-      "Blazorise.Icons.FontAwesome >= 1.8.1",
       "EPPlus >= 8.0.5",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 8.0.17",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 8.0.17",
@@ -5482,19 +5323,7 @@
             "target": "Package",
             "version": "[3.3.1, )"
           },
-          "Blazorise": {
-            "target": "Package",
-            "version": "[1.8.1, )"
-          },
           "Blazorise.Bootstrap": {
-            "target": "Package",
-            "version": "[1.8.1, )"
-          },
-          "Blazorise.Charts": {
-            "target": "Package",
-            "version": "[1.8.1, )"
-          },
-          "Blazorise.Icons.FontAwesome": {
             "target": "Package",
             "version": "[1.8.1, )"
           },

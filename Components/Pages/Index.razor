@@ -1,126 +1,548 @@
 ﻿@page "/Index"
-@inject CUENSA.Repositories.Interfaces.ICommon CommonService
 
-<PageTitle>Dashboard - Cuentas de Salud</PageTitle>
+<PageTitle>Observatorio Panamá ¡Cuéntame! - Gasto en Salud</PageTitle>
 
-<div class="container mt-4">
-    <h3 class="mb-4 fw-bold text-center">📊 Dashboard de Cuentas de Salud</h3>
+<style>
+    .hero-section {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 4rem 0;
+        margin-bottom: 3rem;
+        border-radius: 0 0 50px 50px;
+    }
+    
+    .stat-card {
+        background: white;
+        border-radius: 15px;
+        padding: 2rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        border: none;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        height: 100%;
+    }
+    
+    .stat-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #4f46e5;
+        margin-bottom: 0.5rem;
+    }
+    
+    .stat-label {
+        color: #6b7280;
+        font-weight: 500;
+        text-transform: uppercase;
+        font-size: 0.875rem;
+        letter-spacing: 0.05em;
+    }
+    
+    .chart-container {
+        background: white;
+        border-radius: 15px;
+        padding: 2rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        margin-bottom: 2rem;
+    }
+    
+    .section-title {
+        color: #1f2937;
+        font-weight: 700;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        position: relative;
+        padding-bottom: 1rem;
+    }
+    
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 4px;
+        background: linear-gradient(90deg, #4f46e5, #7c3aed);
+        border-radius: 2px;
+    }
+    
+    .info-badge {
+        background: linear-gradient(135deg, #10b981, #059669);
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 25px;
+        font-weight: 600;
+        display: inline-block;
+        margin: 0.25rem;
+        font-size: 0.875rem;
+    }
+    
+    .trend-indicator {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 0.875rem;
+    }
+    
+    .trend-stable {
+        background: rgba(59, 130, 246, 0.1);
+        color: #2563eb;
+    }
+    
+    .trend-negative {
+        background: rgba(239, 68, 68, 0.1);
+        color: #dc2626;
+    }
+    
+    .data-table {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    .table thead th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        font-weight: 600;
+        padding: 1rem;
+    }
+    
+    .table tbody tr:hover {
+        background-color: #f8fafc;
+    }
+    
+    .highlight-row {
+        background: linear-gradient(135deg, rgba(79, 70, 229, 0.1), rgba(124, 58, 237, 0.1));
+        font-weight: 600;
+    }
+    
+    .methodology-section {
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        border-radius: 15px;
+        padding: 2rem;
+        margin-top: 3rem;
+    }
+</style>
 
-    <!-- Tarjetas -->
-    <div class="row g-3 mb-4">
-        <div class="col-md-3">
-            <Card class="shadow-sm border-0 bg-light">
-                <CardBody class="text-center">
-                    <h6 class="text-muted">Total Instalaciones</h6>
-                    <h2 class="fw-bold text-primary">@TotalInstalaciones</h2>
-                </CardBody>
-            </Card>
-        </div>
-        <div class="col-md-3">
-            <Card class="shadow-sm border-0 bg-light">
-                <CardBody class="text-center">
-                    <h6 class="text-muted">Clasificaciones SHA</h6>
-                    <h2 class="fw-bold text-success">@TotalClasificaciones</h2>
-                </CardBody>
-            </Card>
-        </div>
-        <div class="col-md-3">
-            <Card class="shadow-sm border-0 bg-light">
-                <CardBody class="text-center">
-                    <h6 class="text-muted">Provincias</h6>
-                    <h2 class="fw-bold text-warning">@TotalProvincias</h2>
-                </CardBody>
-            </Card>
-        </div>
-        <div class="col-md-3">
-            <Card class="shadow-sm border-0 bg-light">
-                <CardBody class="text-center">
-                    <h6 class="text-muted">Registros Totales</h6>
-                    <h2 class="fw-bold text-danger">@TotalRegistros</h2>
-                </CardBody>
-            </Card>
-        </div>
-    </div>
-
-    <!-- Gráficas -->
-    <div class="row g-4">
-        <div class="col-md-6">
-            <Card class="shadow-sm border-0">
-                <CardHeader class="fw-bold bg-primary text-white">
-                    Instalaciones por Provincia
-                </CardHeader>
-                <CardBody>
-                    <BlazorBootstrap.BarChart Data="@BarChartData" />
-                </CardBody>
-            </Card>
-        </div>
-        <div class="col-md-6">
-            <Card class="shadow-sm border-0">
-                <CardHeader class="fw-bold bg-success text-white">
-                    Distribución por Clasificación SHA
-                </CardHeader>
-                <CardBody>
-                    <BlazorBootstrap.PieChart Data="@PieChartData" />
-                </CardBody>
-            </Card>
+<div class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold mb-3">Indicadores de Salud</h1>
+                <h2 class="h3 mb-4 opacity-90">Gasto MINSA 2024</h2>
+                <p class="lead mb-0">Análisis del monto y gasto público ejecutado en MINSA como porcentaje del PIB</p>
+            </div>
+            <div class="col-lg-4 text-center">
+                <div class="stat-number text-white mb-2">3.1%</div>
+                <div class="text-white-50">del PIB destinado a salud</div>
+            </div>
         </div>
     </div>
 </div>
 
-@code {
-    // Gráficas
-    private ChartData BarChartData = default!;
-    private ChartData PieChartData = default!;
+<div class="container">
+    <!-- Indicadores Principales -->
+    <div class="row mb-5">
+        <div class="col-md-3 mb-4">
+            <div class="stat-card text-center">
+                <div class="stat-number">B/. 86.3B</div>
+                <div class="stat-label">PIB Nacional 2024</div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="stat-card text-center">
+                <div class="stat-number">B/. 2.73B</div>
+                <div class="stat-label">Ejecución MINSA</div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="stat-card text-center">
+                <div class="stat-number">3.1%</div>
+                <div class="stat-label">% PIB a Salud</div>
+                <span class="trend-indicator trend-negative mt-2">
+                    <i class="bi bi-arrow-down me-1"></i>
+                    Desde 3.7% en 2014
+                </span>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="stat-card text-center">
+                <div class="stat-number">B/. 1,132</div>
+                <div class="stat-label">Gasto per Cápita</div>
+                <div class="small text-muted mt-2">Por persona/año</div>
+            </div>
+        </div>
+    </div>
 
-    // Totales
-    private int TotalInstalaciones;
-    private int TotalClasificaciones;
-    private int TotalProvincias;
-    private int TotalRegistros;
+    <!-- Gráfico de Evolución -->
+    <div class="chart-container">
+        <h3 class="section-title">Evolución del Gasto en Salud (2014-2024)</h3>
+        <div class="row">
+            <div class="col-lg-8">
+                <div style="position: relative; height: 400px;">
+                    <canvas id="evolutionChart"></canvas>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <h5 class="mb-3">Puntos Clave</h5>
+                <div class="info-badge">Pico máximo: 3.7% (2014-2015)</div>
+                <div class="info-badge">Mínimo histórico: 3.1% (2023-2024)</div>
+                <div class="info-badge">Promedio década: 3.4%</div>
+                <div class="info-badge">Tendencia: Descendente</div>
+            </div>
+        </div>
+    </div>
 
-    protected override async Task OnInitializedAsync()
-    {
-        TotalInstalaciones = await CommonService.GetTotalInstalacionesAsync();
-        TotalClasificaciones = await CommonService.GetTotalClasificacionesAsync();
-        TotalProvincias = await CommonService.GetTotalProvinciasAsync();
-        TotalRegistros = await CommonService.GetTotalRegistrosAsync();
+    <!-- Distribución del Presupuesto -->
+    <div class="row mb-5">
+        <div class="col-lg-6">
+            <div class="chart-container">
+                <h4 class="section-title">Distribución Presupuesto 2024</h4>
+                <div style="position: relative; height: 300px;">
+                    <canvas id="distributionChart"></canvas>
+                </div>
+                <div class="mt-3">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Gasto Corriente (Funcionamiento)</span>
+                        <strong>B/. 1,978.6M (75.1%)</strong>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <span>Gasto Capital (Inversiones)</span>
+                        <strong>B/. 657.9M (24.9%)</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="chart-container">
+                <h4 class="section-title">Comparativo Regional</h4>
+                <div style="position: relative; height: 300px;">
+                    <canvas id="regionalChart"></canvas>
+                </div>
+                <div class="mt-3 text-center">
+                    <small class="text-muted">
+                        Panamá invierte 3.1% del PIB en salud pública
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        // Instalaciones por provincia
-        var instalacionesPorProvincia = await CommonService.GetInstalacionesPorProvinciaAsync();
-        BarChartData = new ChartData
-        {
-            Labels = instalacionesPorProvincia.Keys.ToList(),
-            Datasets = new List<IChartDataset>
-            {
-                new BarChartDataset
-                {
-                    Label = "Instalaciones",
-                    Data = instalacionesPorProvincia.Values.Select(v => (double?)v).ToList(),
-                    BackgroundColor = new List<string>
-                    {
-                        "#007bff", "#28a745", "#ffc107", "#dc3545", "#6f42c1"
+    <!-- Tabla Histórica -->
+    <div class="data-table mb-5">
+        <h3 class="section-title p-4 pb-0">Datos Históricos Detallados (2014-2024)</h3>
+        <div class="table-responsive">
+            <table class="table table-hover mb-0">
+                <thead>
+                    <tr>
+                        <th>Año</th>
+                        <th>PIB Nacional (B/.)</th>
+                        <th>Presupuesto MINSA (B/.)</th>
+                        <th>Gasto Corriente (B/.)</th>
+                        <th>Gasto Capital (B/.)</th>
+                        <th>% del PIB</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2014</td>
+                        <td>49,921.4M</td>
+                        <td>1,856.1M</td>
+                        <td>1,341.5M</td>
+                        <td>514.7M</td>
+                        <td><span class="badge bg-success">3.7%</span></td>
+                    </tr>
+                    <tr>
+                        <td>2015</td>
+                        <td>54,091.8M</td>
+                        <td>2,000.2M</td>
+                        <td>1,400.7M</td>
+                        <td>599.5M</td>
+                        <td><span class="badge bg-success">3.7%</span></td>
+                    </tr>
+                    <tr>
+                        <td>2016</td>
+                        <td>57,907.7M</td>
+                        <td>2,019.3M</td>
+                        <td>1,588.8M</td>
+                        <td>430.5M</td>
+                        <td><span class="badge bg-warning">3.5%</span></td>
+                    </tr>
+                    <tr>
+                        <td>2017</td>
+                        <td>62,202.7M</td>
+                        <td>2,113.8M</td>
+                        <td>1,696.2M</td>
+                        <td>417.7M</td>
+                        <td><span class="badge bg-warning">3.4%</span></td>
+                    </tr>
+                    <tr>
+                        <td>2018</td>
+                        <td>67,294.2M</td>
+                        <td>2,157.4M</td>
+                        <td>1,680.2M</td>
+                        <td>477.2M</td>
+                        <td><span class="badge bg-warning">3.2%</span></td>
+                    </tr>
+                    <tr>
+                        <td>2019</td>
+                        <td>69,721.8M</td>
+                        <td>2,331.4M</td>
+                        <td>1,757.7M</td>
+                        <td>573.7M</td>
+                        <td><span class="badge bg-warning">3.3%</span></td>
+                    </tr>
+                    <tr>
+                        <td>2020</td>
+                        <td>57,086.8M</td>
+                        <td>2,041.8M</td>
+                        <td>1,737.6M</td>
+                        <td>304.2M</td>
+                        <td><span class="badge bg-info">3.6%</span></td>
+                    </tr>
+                    <tr>
+                        <td>2021</td>
+                        <td>67,406.7M</td>
+                        <td>2,202.6M</td>
+                        <td>1,839.6M</td>
+                        <td>362.5M</td>
+                        <td><span class="badge bg-warning">3.3%</span></td>
+                    </tr>
+                    <tr>
+                        <td>2022</td>
+                        <td>76,522.5M</td>
+                        <td>2,532.1M</td>
+                        <td>1,925.6M</td>
+                        <td>606.5M</td>
+                        <td><span class="badge bg-warning">3.3%</span></td>
+                    </tr>
+                    <tr>
+                        <td>2023</td>
+                        <td>83,382.4M</td>
+                        <td>2,555.5M</td>
+                        <td>1,963.6M</td>
+                        <td>592.0M</td>
+                        <td><span class="badge bg-danger">3.1%</span></td>
+                    </tr>
+                    <tr class="highlight-row">
+                        <td><strong>2024</strong></td>
+                        <td><strong>86,260.4M</strong></td>
+                        <td><strong>2,636.4M</strong></td>
+                        <td><strong>1,978.6M</strong></td>
+                        <td><strong>657.9M</strong></td>
+                        <td><span class="badge bg-danger"><strong>3.1%</strong></span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Metodología -->
+    <div class="methodology-section">
+        <h3 class="section-title">Metodología y Fuentes</h3>
+        <div class="row">
+            <div class="col-md-6">
+                <h5>Fuentes de Datos</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Ministerio de Economía y Finanzas - Presupuesto General del Estado</li>
+                    <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Contraloría General de la República - INEC</li>
+                    <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Ministerio de Salud - Ejecución Presupuestaria</li>
+                    <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Grupo Banco Mundial</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h5>Cálculos</h5>
+                <div class="bg-white p-3 rounded">
+                    <p class="mb-2"><strong>% PIB en Salud:</strong></p>
+                    <code>
+                        (Ejecución MINSA / PIB Nacional) × 100
+                    </code>
+                    <p class="mb-2 mt-3"><strong>Gasto per Cápita:</strong></p>
+                    <code>
+                        Gasto Total / Población Total
+                    </code>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Verificar que Chart.js esté cargado
+        if (typeof Chart === 'undefined') {
+            console.error('Chart.js no está cargado');
+            return;
+        }
+
+        // Gráfico de Evolución
+        const evolutionCanvas = document.getElementById('evolutionChart');
+        if (evolutionCanvas) {
+            const evolutionCtx = evolutionCanvas.getContext('2d');
+            new Chart(evolutionCtx, {
+                type: 'line',
+                data: {
+                    labels: ['2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'],
+                    datasets: [{
+                        label: '% del PIB destinado a Salud',
+                        data: [3.7, 3.7, 3.5, 3.4, 3.2, 3.3, 3.6, 3.3, 3.3, 3.1, 3.1],
+                        borderColor: '#4f46e5',
+                        backgroundColor: 'rgba(79, 70, 229, 0.1)',
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.4,
+                        pointBackgroundColor: '#4f46e5',
+                        pointBorderColor: '#ffffff',
+                        pointBorderWidth: 2,
+                        pointRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    interaction: {
+                        intersect: false,
+                        mode: 'index'
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            min: 3.0,
+                            max: 4.0,
+                            ticks: {
+                                callback: function(value) {
+                                    return value + '%';
+                                }
+                            },
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.05)'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.05)'
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'top'
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.parsed.y + '% del PIB';
+                                }
+                            }
+                        }
                     }
                 }
-            }
-        };
+            });
+        }
 
-        // Clasificación SHA
-        var clasificacionesSha = await CommonService.GetClasificacionesShaAsync();
-        PieChartData = new ChartData
-        {
-            Labels = clasificacionesSha.Keys.ToList(),
-            Datasets = new List<IChartDataset>
-            {
-                new PieChartDataset
-                {
-                    Label = "Clasificación SHA",
-                    Data = clasificacionesSha.Values.Select(v => (double?)v).ToList(),
-                    BackgroundColor = new List<string>
-                    {
-                        "#17a2b8", "#ffc107", "#28a745", "#dc3545"
+        // Gráfico de Distribución
+        const distributionCanvas = document.getElementById('distributionChart');
+        if (distributionCanvas) {
+            const distributionCtx = distributionCanvas.getContext('2d');
+            new Chart(distributionCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Gasto Corriente (Funcionamiento)', 'Gasto Capital (Inversiones)'],
+                    datasets: [{
+                        data: [1978.6, 657.9],
+                        backgroundColor: ['#4f46e5', '#7c3aed'],
+                        borderWidth: 0,
+                        hoverOffset: 10
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                padding: 20,
+                                usePointStyle: true
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const label = context.label || '';
+                                    const value = context.parsed;
+                                    const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                    const percentage = ((value / total) * 100).toFixed(1);
+                                    return label + ': B/. ' + value + 'M (' + percentage + '%)';
+                                }
+                            }
+                        }
                     }
                 }
-            }
-        };
-    }
-}
+            });
+        }
+
+        // Gráfico Comparativo Regional
+        const regionalCanvas = document.getElementById('regionalChart');
+        if (regionalCanvas) {
+            const regionalCtx = regionalCanvas.getContext('2d');
+            new Chart(regionalCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Costa Rica', 'Panamá', 'Colombia', 'Guatemala'],
+                    datasets: [{
+                        label: '% PIB en Salud Pública',
+                        data: [7.2, 3.1, 4.1, 2.4],
+                        backgroundColor: ['#10b981', '#4f46e5', '#f59e0b', '#ef4444'],
+                        borderRadius: 8,
+                        borderSkipped: false
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 8,
+                            ticks: {
+                                callback: function(value) {
+                                    return value + '%';
+                                }
+                            },
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.05)'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.parsed.y + '% del PIB';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    });
+</script>

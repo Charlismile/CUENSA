@@ -18,7 +18,7 @@
                     </svg>
                 </div>
                 <div class="position-relative">
-                    <h1 class="display-5 fw-bold mb-2">📊 Reportes de Instalaciones</h1>
+                    <h1 class="display-5 fw-bold mb-2">📊 Estadisticas de Instalaciones</h1>
                     <p class="lead mb-0 opacity-90">Panel de control y análisis de clasificaciones SHA</p>
                 </div>
             </div>
@@ -111,7 +111,76 @@
             </div>
         </div>
     </div>
+<!-- Clasificaciones SHA -->
+    <div class="row">
+        <div class="col-12">
+            <div class="data-table-container">
+                <div class="table-header">
+                    <h4 class="mb-0 d-flex align-items-center">
+                        <i class="fas fa-shield-alt me-2 text-success"></i>
+                        Clasificaciones SHA
+                    </h4>
+                    <div class="table-actions">
+                        <button class="btn btn-outline-success btn-sm me-2">
+                            <i class="fas fa-chart-pie me-1"></i>Gráfico
+                        </button>
+                        <button class="btn btn-success btn-sm">
+                            <i class="fas fa-sync me-1"></i>Actualizar
+                        </button>
+                    </div>
+                </div>
 
+                <div class="table-responsive">
+                    <table id="shaTable" class="modern-table">
+                        <thead>
+                        <tr>
+                            <th class="sortable">
+                                <span>Tipo SHA</span>
+                                <i class="fas fa-sort ms-1"></i>
+                            </th>
+                            <th class="sortable">
+                                <span>Total Registros</span>
+                                <i class="fas fa-sort ms-1"></i>
+                            </th>
+                            <th>Porcentaje</th>
+                            <th>Estado</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach (var item in clasificacionesSha)
+                        {
+                        <tr class="table-row">
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="sha-indicator me-2"></div>
+                                    <strong>@item.Key</strong>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="count-badge">@item.Value</span>
+                            </td>
+                            <td>
+                                @{
+                                var percentage = totalClasificaciones > 0 ? (item.Value * 100.0 / totalClasificaciones) : 0;
+                                }
+                                <div class="d-flex align-items-center">
+                                    <div class="progress flex-grow-1 me-2" style="height: 8px;">
+                                        <div class="progress-bar bg-success" style="width: @percentage%"></div>
+                                    </div>
+                                    <span class="small text-muted">@percentage.ToString("F1")%</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="badge bg-success">Activo</span>
+                            </td>
+                        </tr>
+                        }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Tabla de Instalaciones -->
     <div class="row mb-5">
         <div class="col-12">
@@ -177,77 +246,6 @@
                                         <i class="fas fa-edit"></i>
                                     </button>
                                 </div>
-                            </td>
-                        </tr>
-                        }
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Clasificaciones SHA -->
-    <div class="row">
-        <div class="col-12">
-            <div class="data-table-container">
-                <div class="table-header">
-                    <h4 class="mb-0 d-flex align-items-center">
-                        <i class="fas fa-shield-alt me-2 text-success"></i>
-                        Clasificaciones SHA
-                    </h4>
-                    <div class="table-actions">
-                        <button class="btn btn-outline-success btn-sm me-2">
-                            <i class="fas fa-chart-pie me-1"></i>Gráfico
-                        </button>
-                        <button class="btn btn-success btn-sm">
-                            <i class="fas fa-sync me-1"></i>Actualizar
-                        </button>
-                    </div>
-                </div>
-
-                <div class="table-responsive">
-                    <table id="shaTable" class="modern-table">
-                        <thead>
-                        <tr>
-                            <th class="sortable">
-                                <span>Tipo SHA</span>
-                                <i class="fas fa-sort ms-1"></i>
-                            </th>
-                            <th class="sortable">
-                                <span>Total Registros</span>
-                                <i class="fas fa-sort ms-1"></i>
-                            </th>
-                            <th>Porcentaje</th>
-                            <th>Estado</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        @foreach (var item in clasificacionesSha)
-                        {
-                        <tr class="table-row">
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <div class="sha-indicator me-2"></div>
-                                    <strong>@item.Key</strong>
-                                </div>
-                            </td>
-                            <td>
-                                <span class="count-badge">@item.Value</span>
-                            </td>
-                            <td>
-                                @{
-                                var percentage = totalClasificaciones > 0 ? (item.Value * 100.0 / totalClasificaciones) : 0;
-                                }
-                                <div class="d-flex align-items-center">
-                                    <div class="progress flex-grow-1 me-2" style="height: 8px;">
-                                        <div class="progress-bar bg-success" style="width: @percentage%"></div>
-                                    </div>
-                                    <span class="small text-muted">@percentage.ToString("F1")%</span>
-                                </div>
-                            </td>
-                            <td>
-                                <span class="badge bg-success">Activo</span>
                             </td>
                         </tr>
                         }
