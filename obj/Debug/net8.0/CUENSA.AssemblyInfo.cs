@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CUENSA")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7194e33694c42ca6cccdf5b597b8675a3e69d8ce")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+94e041a6596dba1379f68edc06c63e230bc58ff7")]
 [assembly: System.Reflection.AssemblyProductAttribute("CUENSA")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CUENSA")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
